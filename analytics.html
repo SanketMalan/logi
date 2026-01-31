@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analytics | LogiSmart Dashboard</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="dashboard.css" />
+     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="logo">
+          <i class="fa-solid fa-truck-fast"></i>
+          <span>LogiSmart</span>
+        </div>
+        <nav class="nav-menu">
+           <ul>
+            <li>
+              <a href="dashboard.html">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="kyc.html">
+                <i class="fa-solid fa-id-card"></i>
+                <span>KYC Verification</span>
+              </a>
+            </li>
+            <li>
+              <a href="shipments.html">
+                <i class="fa-solid fa-box"></i>
+                <span>Shipments</span>
+              </a>
+            </li>
+             <li>
+                <a href="create-shipment.html">
+                  <i class="fa-solid fa-plus-circle"></i>
+                  <span>Create Shipment</span>
+                </a>
+              </li>
+            <li>
+              <a href="customers.html">
+                <i class="fa-solid fa-users"></i>
+                <span>Customers</span>
+              </a>
+            </li>
+            <li class="active">
+              <a href="analytics.html">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Analytics</span>
+              </a>
+            </li>
+            <li>
+              <a href="wallet.html">
+                <i class="fa-solid fa-wallet"></i>
+                <span>Wallet</span>
+              </a>
+            </li>
+            <li>
+              <a href="settings.html">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="logout-section">
+          <a href="#">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Logout</span>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Header -->
+        <header class="top-bar">
+          <div class="toggle-btn" id="sidebar-toggle">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <div class="search-bar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search report..." />
+          </div>
+          <div class="user-profile">
+            <div class="notifications">
+              <i class="fa-regular fa-bell"></i>
+              <span class="badge">3</span>
+            </div>
+            <div class="profile-info">
+              <img
+                src="https://ui-avatars.com/api/?name=Admin+User&background=0D8ABC&color=fff"
+                alt="User"
+              />
+              <div class="text">
+                <h4>Alex Morgan</h4>
+                <p>Admin</p>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- Content Wrapper -->
+        <div class="content-wrapper">
+             <div class="section-header" style="justify-content: space-between; display:flex;">
+            <div>
+                 <h2 style="font-size: 1.5rem; font-weight: 700; color: var(--text-primary);">Performance Analytics</h2>
+                 <p style="color: var(--text-secondary); font-size: 0.9rem;">Deep dive into your logistics data.</p>
+            </div>
+             <div>
+                <select style="padding: 0.5rem; border-radius: 0.5rem; border: 1px solid var(--border-color);">
+                  <option>Last 30 Days</option>
+                  <option>Last Quarter</option>
+                  <option>Year to Date</option>
+                </select>
+            </div>
+          </div>
+          
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-info">
+                <p>Total Revenue</p>
+                <h3>₹0</h3>
+                <span class="trend neutral"><i class="fa-solid fa-minus"></i> --</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-info">
+                <p>Avg. Delivery Time</p>
+                <h3>0 Days</h3>
+                <span class="trend neutral"><i class="fa-solid fa-minus"></i> --</span>
+              </div>
+            </div>
+             <div class="stat-card">
+              <div class="stat-info">
+                <p>Return Rate</p>
+                <h3>0%</h3>
+                <span class="trend neutral"><i class="fa-solid fa-minus"></i> --</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+               <div class="chart-container" style="background: white; padding: 1.5rem; border-radius: 1rem; box-shadow: var(--card-shadow);">
+                  <h3 style="margin-bottom: 1rem; font-size: 1.1rem; font-weight: 600;">Shipments by Region</h3>
+                  <div style="height: 300px; display:flex; align-items:center; justify-content:center; background: #f9fafb; border-radius: 0.5rem; color: var(--text-secondary);">
+                      [Pie Chart Placeholder]
+                  </div>
+               </div>
+                <div class="chart-container" style="background: white; padding: 1.5rem; border-radius: 1rem; box-shadow: var(--card-shadow);">
+                  <h3 style="margin-bottom: 1rem; font-size: 1.1rem; font-weight: 600;">Revenue Trend</h3>
+                   <div style="height: 300px; display:flex; align-items:center; justify-content:center; background: #f9fafb; border-radius: 0.5rem; color: var(--text-secondary);">
+                      [Bar Chart Placeholder]
+                  </div>
+               </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="dashboard.js"></script>
+  </body>
+</html>

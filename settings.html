@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings | LogiSmart Dashboard</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="dashboard.css" />
+     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="logo">
+          <i class="fa-solid fa-truck-fast"></i>
+          <span>LogiSmart</span>
+        </div>
+        <nav class="nav-menu">
+           <ul>
+            <li>
+              <a href="dashboard.html">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+              </a>
+            </li>
+             <li>
+              <a href="kyc.html">
+                <i class="fa-solid fa-id-card"></i>
+                <span>KYC Verification</span>
+              </a>
+            </li>
+             <li>
+              <a href="shipments.html">
+                <i class="fa-solid fa-box"></i>
+                <span>Shipments</span>
+              </a>
+            </li>
+             <li>
+                <a href="create-shipment.html">
+                  <i class="fa-solid fa-plus-circle"></i>
+                  <span>Create Shipment</span>
+                </a>
+              </li>
+            <li>
+              <a href="customers.html">
+                <i class="fa-solid fa-users"></i>
+                <span>Customers</span>
+              </a>
+            </li>
+            <li>
+              <a href="analytics.html">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Analytics</span>
+              </a>
+            </li>
+            <li>
+              <a href="wallet.html">
+                <i class="fa-solid fa-wallet"></i>
+                <span>Wallet</span>
+              </a>
+            </li>
+            <li class="active">
+              <a href="settings.html">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="logout-section">
+          <a href="#">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Logout</span>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Header -->
+        <header class="top-bar">
+          <div class="toggle-btn" id="sidebar-toggle">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <div class="search-bar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search settings..." />
+          </div>
+          <div class="user-profile">
+            <div class="notifications">
+              <i class="fa-regular fa-bell"></i>
+              <span class="badge">3</span>
+            </div>
+            <div class="profile-info">
+              <img
+                src="https://ui-avatars.com/api/?name=Admin+User&background=0D8ABC&color=fff"
+                alt="User"
+              />
+              <div class="text">
+                <h4>Alex Morgan</h4>
+                <p>Admin</p>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- Content Wrapper -->
+        <div class="content-wrapper">
+             <div class="section-header">
+                 <h2 style="font-size: 1.5rem; font-weight: 700; color: var(--text-primary);">Account Settings</h2>
+            </div>
+            
+            <div style="background: white; border-radius: 1rem; box-shadow: var(--card-shadow); padding: 2rem; max-width: 800px;">
+                
+                <!-- Profile Section -->
+                <div style="margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border-color);">
+                    <h3 style="margin-bottom: 1.5rem; font-size: 1.1rem; color: var(--text-primary);">Profile Information</h3>
+                    <div style="display: flex; gap: 2rem; align-items: flex-start;">
+                        <input type="file" id="avatarInput" accept="image/*" style="display: none;">
+                        <div style="position: relative; width: 100px; height: 100px; cursor: pointer;" onclick="document.getElementById('avatarInput').click()">
+                            <img id="settingsAvatar" src="https://ui-avatars.com/api/?name=Admin+User&background=0D8ABC&color=fff&size=128" style="width:100%; height:100%; border-radius:50%; object-fit:cover;" alt="Profile">
+                            <div style="position: absolute; bottom: 0; right: 0; background: var(--primary-color); color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid white;">
+                                <i class="fa-solid fa-camera" style="font-size: 0.8rem;"></i>
+                            </div>
+                        </div>
+                        <div style="flex:1; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                            <div>
+                                <label style="display:block; margin-bottom:0.5rem; font-size:0.875rem; color:var(--text-secondary);">First Name</label>
+                                <input type="text" id="firstName" placeholder="First Name" style="width:100%; padding:0.75rem; border:1px solid var(--border-color); border-radius:0.5rem; outline:none;">
+                            </div>
+                             <div>
+                                <label style="display:block; margin-bottom:0.5rem; font-size:0.875rem; color:var(--text-secondary);">Last Name</label>
+                                <input type="text" id="lastName" placeholder="Last Name" style="width:100%; padding:0.75rem; border:1px solid var(--border-color); border-radius:0.5rem; outline:none;">
+                            </div>
+                             <div style="grid-column: span 2;">
+                                <label style="display:block; margin-bottom:0.5rem; font-size:0.875rem; color:var(--text-secondary);">Email Address</label>
+                                <input type="email" id="email" placeholder="Email Address" style="width:100%; padding:0.75rem; border:1px solid var(--border-color); border-radius:0.5rem; outline:none;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Notifications -->
+                 <div style="margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border-color);">
+                    <h3 style="margin-bottom: 1.5rem; font-size: 1.1rem; color: var(--text-primary);">Notifications</h3>
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <label style="display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+                            <div>
+                                <span style="display: block; font-weight: 500;">Email Notifications</span>
+                                <span style="font-size: 0.85rem; color: var(--text-secondary);">Receive daily summaries and alerts</span>
+                            </div>
+                            <input type="checkbox" id="emailNotif" style="accent-color: var(--primary-color); transform: scale(1.2);">
+                        </label>
+                         <label style="display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+                            <div>
+                                <span style="display: block; font-weight: 500;">SMS Alerts</span>
+                                <span style="font-size: 0.85rem; color: var(--text-secondary);">Get updates on shipment status changes</span>
+                            </div>
+                            <input type="checkbox" id="smsNotif" style="accent-color: var(--primary-color); transform: scale(1.2);">
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Security Section -->
+                <div style="margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border-color);">
+                    <h3 style="margin-bottom: 1.5rem; font-size: 1.1rem; color: var(--text-primary);">Security</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                        <div>
+                            <label style="display:block; margin-bottom:0.5rem; font-size:0.875rem; color:var(--text-secondary);">New Password</label>
+                            <input type="password" id="newPassword" placeholder="New Password" style="width:100%; padding:0.75rem; border:1px solid var(--border-color); border-radius:0.5rem; outline:none;">
+                        </div>
+                        <div>
+                            <label style="display:block; margin-bottom:0.5rem; font-size:0.875rem; color:var(--text-secondary);">Confirm Password</label>
+                            <input type="password" id="confirmPassword" placeholder="Confirm Password" style="width:100%; padding:0.75rem; border:1px solid var(--border-color); border-radius:0.5rem; outline:none;">
+                        </div>
+                    </div>
+                    <button id="updatePasswordBtn" style="margin-top: 1rem; padding: 0.75rem 1.5rem; background: var(--primary-color); color: white; border: none; border-radius: 0.5rem; cursor: pointer; font-weight: 500;">
+                        Update Password
+                    </button>
+                </div>
+
+                <div style="display: flex; justify-content: flex-end; gap: 1rem;">
+                    <!-- Auto-save indicator -->
+                    <span id="saveIndicator" style="color: #059669; font-size: 0.9rem; align-self: center; opacity: 0; transition: opacity 0.5s;">
+                        <i class="fa-solid fa-check"></i> Changes Saved
+                    </span>
+                </div>
+            </div>
+
+        </div>
+      </main>
+    </div>
+    <script src="dashboard.js"></script>
+  </body>
+</html>

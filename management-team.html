@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management Team | Logicstick India</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        .leadership-hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 80px;
+        }
+
+        .leader-card {
+            background: #fff;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+
+        .leader-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--primary);
+        }
+
+        .leader-img {
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .leader-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .leader-info {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .leader-info h3 {
+            font-size: 1.75rem;
+            margin-bottom: 5px;
+            color: var(--primary);
+        }
+
+        .leader-info .role {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 500;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 0.85rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .leader-info p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .social-links {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: #f1f5f9;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            color: #fff;
+        }
+
+        .culture-section {
+            background: #f8fafc;
+            padding: 100px 0;
+            margin-top: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header id="header" class="scrolled">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">LogicStick<span class="dot">.</span></a>
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item">Markets <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="market-ecommerce.html">E-Commerce</a>
+                            <a href="market-pharma.html">Pharma</a>
+                            <a href="market-automotive.html">Automotive</a>
+                            <a href="market-fmcg.html">FMCG & Retail</a>
+                            <a href="market-manufacturing.html">Manufacturing</a>
+                            <a href="market-agriculture.html">Agriculture</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item">Solutions <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="solution-order-management.html">Order Management - Penom</a>
+                            <a href="solution-distribution.html">Distribution & Fulfillment</a>
+                            <a href="solution-transportation.html">Transportation</a>
+                            <a href="solution-customs.html">Customs Brokerage</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item active">About Us <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="company-overview.html">Company Overview</a>
+                            <a href="management-team.html">Management Team</a>
+                            <a href="locations.html">Locations</a>
+                        </div>
+                    </li>
+                    <li><a href="careers.html" class="nav-item">Careers</a></li>
+                    <li><a href="contact.html" class="nav-item">Contact Us</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="contact.html" class="btn btn-primary">Join the Journey</a>
+                    <button class="menu-toggle"><i class="ri-menu-4-line"></i></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="leadership-hero">
+        <div class="container">
+            <h1 class="fade-in-up" style="font-size: 3.5rem;">The Minds Behind <br> The Movement</h1>
+            <p class="fade-in-up delay-1" style="max-width: 600px; margin: 20px auto; opacity: 0.9;">Leading with a vision to redefine logistics through technology, empathy, and operational excellence.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="team-grid">
+                <div class="leader-card">
+                    <div class="leader-img">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1000&auto=format&fit=crop" alt="CEO">
+                    </div>
+                    <div class="leader-info">
+                        <span class="role">Founder & CEO</span>
+                        <h3>Vikram Malhotra</h3>
+                        <p>With 20+ years in supply chain strategy, Vikram founded LogicStick to bridge the gap between traditional logistics and modern tech.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="ri-linkedin-fill"></i></a>
+                            <a href="#"><i class="ri-twitter-x-line"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="leader-card">
+                    <div class="leader-img">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000&auto=format&fit=crop" alt="COO">
+                    </div>
+                    <div class="leader-info">
+                        <span class="role">Chief Operations Officer</span>
+                        <h3>Priya Sharma</h3>
+                        <p>An expert in lean manufacturing and distribution, Priya oversees our pan-India hub operations and partner networks.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="ri-linkedin-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="leader-card">
+                    <div class="leader-img">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1000&auto=format&fit=crop" alt="CTO">
+                    </div>
+                    <div class="leader-info">
+                        <span class="role">Chief Tech Officer</span>
+                        <h3>Arjun Nair</h3>
+                        <p>The architect of Penom™, Arjun leads our engineering teams in developing world-class AI and robotics applications.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="ri-linkedin-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="culture-section">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto;">
+                <span class="badge">Our Culture</span>
+                <h2 style="margin-top: 20px;">Moving as One Team.</h2>
+                <p style="margin: 30px 0; font-size: 1.15rem; color: var(--text-muted);">At LogicStick, we foster an environment of radical candor, bold experimentation, and customer obsession. We're always looking for brilliant minds to join us.</p>
+                <a href="careers.html" class="btn btn-outline">View Open Roles</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo text-white">LogicStick<span class="dot">.</span></a>
+                <p>India's most trusted logistics partner.</p>
+            </div>
+            <div class="footer-bottom" style="margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; width: 100%; text-align: center;">
+                <p>&copy; 2026 LogicStick Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharma Logistics | Logicstick India</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        .market-hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('https://images.unsplash.com/photo-1587854692152-cbe660dbbb88?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .compliance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .compliance-card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-left: 5px solid #10b981;
+        }
+
+        .compliance-card i {
+            font-size: 2.5rem;
+            color: #10b981;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .cold-chain-banner {
+            background: #ecfdf5;
+            padding: 80px 0;
+            margin: 60px 0;
+            border-radius: 30px;
+        }
+
+        .banner-flex {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .banner-image {
+            flex: 1;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .banner-text {
+            flex: 1.2;
+        }
+    </style>
+</head>
+<body>
+    <header id="header" class="scrolled">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">LogicStick<span class="dot">.</span></a>
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item active">Markets <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="market-ecommerce.html">E-Commerce</a>
+                            <a href="market-pharma.html">Pharma</a>
+                            <a href="market-automotive.html">Automotive</a>
+                            <a href="market-fmcg.html">FMCG & Retail</a>
+                            <a href="market-manufacturing.html">Manufacturing</a>
+                            <a href="market-agriculture.html">Agriculture</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item">Solutions <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="solution-order-management.html">Order Management - Penom</a>
+                            <a href="solution-distribution.html">Distribution & Fulfillment</a>
+                            <a href="solution-transportation.html">Transportation</a>
+                            <a href="solution-customs.html">Customs Brokerage</a>
+                        </div>
+                    </li>
+                    <li><a href="careers.html" class="nav-item">Careers</a></li>
+                    <li><a href="contact.html" class="nav-item">Contact Us</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="contact.html" class="btn btn-primary">Get Quote</a>
+                    <button class="menu-toggle"><i class="ri-menu-4-line"></i></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="market-hero">
+        <div class="container">
+            <h1 class="fade-in-up">Healthcare & Pharma <br> Zero-Defect Logistics</h1>
+            <p class="fade-in-up delay-1" style="max-width: 700px; margin: 20px auto;">Life-saving products deserve world-class handling. GDP-compliant storage and transportation for sensitive medical supplies.</p>
+            <a href="contact.html" class="btn btn-primary fade-in-up delay-2">Ensure Compliance</a>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge" style="background: #d1fae5; color: #065f46;">Safety First</span>
+                <h2>Pharma-Grade Infrastructure</h2>
+            </div>
+            
+            <div class="compliance-grid">
+                <div class="compliance-card">
+                    <i class="ri-medicine-bottle-line"></i>
+                    <h3>GDP Compliance</h3>
+                    <p>Strict adherence to Good Distribution Practices, ensuring product integrity from factory to patient.</p>
+                </div>
+                <div class="compliance-card">
+                    <i class="ri-temp-cold-line"></i>
+                    <h3>Cold Chain Mastery</h3>
+                    <p>Precise temperature control (2-8°C, 15-25°C, and Ultra-Low) with continuous 24/7 monitoring.</p>
+                </div>
+                <div class="compliance-card">
+                    <i class="ri-shield-user-line"></i>
+                    <h3>Secure Handling</h3>
+                    <p>Advanced security protocols for high-value medications and Narcotics handling.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works-section" style="padding: 100px 0; background: #fff;">
+        <div class="container">
+            <div class="section-header" style="text-align: center; margin-bottom: 60px;">
+                <span class="badge" style="background: #ecfdf5; color: #065f46;">Cold Chain Protocol</span>
+                <h2>Our Pharma Logistics Process</h2>
+                <p style="max-width: 600px; margin: 15px auto; color: var(--text-muted);">A zero-compromise workflow designed for the highest safety standards.</p>
+            </div>
+            
+            <div class="workflow-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px;">
+                <div class="workflow-step" style="background: #f8fafc; padding: 30px; border-radius: 20px;">
+                    <i class="ri-shield-flash-line" style="font-size: 2.5rem; color: #10b981; display: block; margin-bottom: 20px;"></i>
+                    <h4 style="margin-bottom: 10px;">Pre-Arrival Audit</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Every shipment undergoes a digital document audit and temperature manifest check before it enters our cold rooms.</p>
+                </div>
+                <div class="workflow-step" style="background: #f8fafc; padding: 30px; border-radius: 20px;">
+                    <i class="ri-temp-cold-line" style="font-size: 2.5rem; color: #10b981; display: block; margin-bottom: 20px;"></i>
+                    <h4 style="margin-bottom: 10px;">Validated Storage</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Goods are placed in industry-validated cold zones (2-8°C, etc.) with dual-backup cooling systems and 24/7 logging.</p>
+                </div>
+                <div class="workflow-step" style="background: #f8fafc; padding: 30px; border-radius: 20px;">
+                    <i class="ri-truck-fill" style="font-size: 2.5rem; color: #10b981; display: block; margin-bottom: 20px;"></i>
+                    <h4 style="margin-bottom: 10px;">Insulated Transit</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Refrigerated trucks (Reefers) equipped with IoT sensors ensure the thermal profile remains stable throughout the journey.</p>
+                </div>
+                <div class="workflow-step" style="background: #f8fafc; padding: 30px; border-radius: 20px;">
+                    <i class="ri-microscope-line" style="font-size: 2.5rem; color: #10b981; display: block; margin-bottom: 20px;"></i>
+                    <h4 style="margin-bottom: 10px;">GXP Verified Delivery</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Digital proof of delivery includes an end-to-end temperature log, proving that the cold chain was never broken.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="cold-chain-banner">
+            <div class="container banner-flex">
+                <div class="banner-image">
+                    <img src="https://mecaluxcom.cdnwm.com/documents/20128/637237/PCaseImage+-+Gallery+-+0+-+Cp-comag-mobile-pallet-racking-movirack.jpg/864349c6-1470-4824-59b8-fe1dfa385c43?t=1766140844382&e=jpg" alt="Cold Chain Warehouse">
+                </div>
+                <div class="banner-text">
+                    <h2 style="color: #065f46;">Intelligent Cold Chain</h2>
+                    <p style="margin: 20px 0; color: #065f46; opacity: 0.8;">Our fleet of refrigerated trucks and climate-controlled hubs are equipped with IoT sensors that provide real-time thermal alerts, preventing spoilage before it happens.</p>
+                    <ul class="feature-list">
+                        <li><i class="ri-checkbox-circle-fill" style="color: #10b981;"></i> Real-time Temp Monitoring</li>
+                        <li><i class="ri-checkbox-circle-fill" style="color: #10b981;"></i> Validated Packaging Solutions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo text-white">LogicStick<span class="dot">.</span></a>
+                <p>India's most trusted logistics partner.</p>
+            </div>
+            <div class="footer-bottom" style="margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; width: 100%; text-align: center;">
+                <p>&copy; 2026 LogicStick Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

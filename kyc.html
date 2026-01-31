@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KYC Verification - LogiSmart</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="dashboard.css" />
+    <!-- jsPDF & AutoTable -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
+    <style>
+      .form-container {
+        background: white;
+        border-radius: 1rem;
+        padding: 2rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      .form-section {
+        margin-bottom: 2.5rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid var(--border-color);
+      }
+      .form-section:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+      .section-title {
+        font-size: 1.1rem;
+        color: var(--text-primary);
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+      .section-title i {
+        color: var(--primary-color);
+      }
+      .form-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+      }
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .form-group label {
+        font-size: 0.875rem;
+        color: var(--text-secondary);
+        font-weight: 500;
+      }
+      .form-group input[type="text"],
+      .form-group input[type="number"],
+      .form-group select,
+      .form-group textarea {
+        padding: 0.75rem;
+        border: 1px solid var(--border-color);
+        border-radius: 0.5rem;
+        font-family: 'Inter', sans-serif;
+        outline: none;
+        transition: border-color 0.2s;
+      }
+      .form-group input:focus,
+      .form-group select:focus,
+      .form-group textarea:focus {
+        border-color: var(--primary-color);
+      }
+      
+      .file-upload-box {
+        border: 2px dashed var(--border-color);
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.2s;
+        background: #f9fafb;
+      }
+      .file-upload-box:hover {
+        border-color: var(--primary-color);
+        background: #eef2ff;
+      }
+      .file-upload-box p {
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        margin-top: 0.5rem;
+      }
+      .file-upload-box i {
+        font-size: 1.5rem;
+        color: var(--text-secondary);
+      }
+
+      .btn-submit {
+        background: var(--primary-color);
+        color: white;
+        border: none;
+        padding: 1rem 2rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        cursor: pointer;
+        width: 100%;
+        transition: background 0.2s;
+        font-size: 1rem;
+        margin-top: 2rem;
+      }
+      .btn-submit:hover {
+        background: var(--primary-dark);
+      }
+      
+      .status-banner {
+          background-color: #fff7ed; 
+          border: 1px solid #ffedd5;
+          color: #9a3412;
+          padding: 1rem;
+          border-radius: 0.5rem;
+          margin-bottom: 2rem;
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="logo">
+          <i class="fa-solid fa-truck-fast"></i>
+          <span>LogiSmart</span>
+        </div>
+        <nav class="nav-menu">
+          <ul>
+            <li>
+              <a href="dashboard.html">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li class="active">
+              <a href="kyc.html">
+                <i class="fa-solid fa-id-card"></i>
+                <span>KYC Verification</span>
+              </a>
+            </li>
+             <li>
+                <a href="create-shipment.html">
+                  <i class="fa-solid fa-plus-circle"></i>
+                  <span>Create Shipment</span>
+                </a>
+              </li>
+            <li>
+              <a href="shipments.html">
+                <i class="fa-solid fa-box"></i>
+                <span>Shipments</span>
+              </a>
+            </li>
+            <li>
+              <a href="customers.html">
+                <i class="fa-solid fa-users"></i>
+                <span>Customers</span>
+              </a>
+            </li>
+            <li>
+              <a href="analytics.html">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Analytics</span>
+              </a>
+            </li>
+            <li>
+              <a href="wallet.html">
+                <i class="fa-solid fa-wallet"></i>
+                <span>Wallet</span>
+              </a>
+            </li>
+            <li>
+              <a href="settings.html">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="logout-section">
+          <a href="#">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Logout</span>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Header -->
+        <header class="top-bar">
+          <div class="toggle-btn" id="sidebar-toggle">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <div class="search-bar">
+             <h2 style="font-size: 1.25rem; font-weight: 600; color: var(--text-primary);">KYC Verification</h2>
+          </div>
+          <div class="user-profile">
+            <div class="notifications">
+              <i class="fa-regular fa-bell"></i>
+              <span class="badge">3</span>
+            </div>
+            <div class="profile-info">
+              <img src="" alt="User" /> <!-- Populated by JS -->
+              <div class="text">
+                <h4></h4> <!-- Populated by JS -->
+                <p>User</p>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- Content Wrapper -->
+        <div class="content-wrapper">
+            
+            <div class="status-banner">
+                <i class="fa-solid fa-circle-info"></i>
+                <div>
+                    <strong>Verification Pending</strong>
+                    <p style="font-size: 0.85rem; margin-top: 0.1rem;">Please complete the form below to unlock full account features such as higher wallet limits and international shipping.</p>
+                </div>
+            </div>
+
+          <form id="kycForm" class="form-container">
+            
+            <!-- Company Details -->
+             <div class="form-section">
+                 <div class="section-title"><i class="fa-solid fa-building"></i> Company Details</div>
+                 <div class="form-grid">
+                     <div class="form-group">
+                         <label>Company Name</label>
+                         <input type="text" name="companyName" required placeholder="Legal Business Name">
+                     </div>
+                     <div class="form-group">
+                         <label>Registered Mobile Number</label>
+                         <input type="text" id="registeredMobile" readonly style="background: #f1f5f9; color: #64748b; cursor: not-allowed;" value="Loading...">
+                         <small style="color: var(--primary-color); font-size: 0.75rem;"><i class="fa-solid fa-check-circle"></i> Verified via OTP</small>
+                     </div>
+                     <div class="form-group">
+                         <label>GST Number</label>
+                         <input type="text" name="gstNumber" required placeholder="22AAAAA0000A1Z5">
+                     </div>
+                     <div class="form-group" style="grid-column: 1 / -1;">
+                        <label>Registered Address</label>
+                        <textarea name="companyAddress" rows="2" required placeholder="Full business address"></textarea>
+                     </div>
+                     <div class="form-group" style="grid-column: 1 / -1;">
+                         <label>Upload GST Certificate</label>
+                         <div class="file-upload-box" onclick="document.getElementById('gstFile').click()">
+                             <i class="fa-solid fa-cloud-arrow-up"></i>
+                             <p>Click to upload or drag and drop<br>PDF, JPG or PNG (Max 5MB)</p>
+                             <input type="file" id="gstFile" hidden>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+
+            <!-- Identity Proof -->
+            <div class="form-section">
+                <div class="section-title"><i class="fa-solid fa-user-shield"></i> Identity Proof (Proprietor/Director)</div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>PAN Number</label>
+                        <input type="text" name="panNumber" required placeholder="ABCDE1234F">
+                    </div>
+                     <div class="form-group">
+                        <label>Aadhaar Number</label>
+                        <input type="text" name="aadhaarNumber" required placeholder="1234 5678 9012">
+                    </div>
+                    
+                    <div class="form-group">
+                         <label>Upload PAN Card</label>
+                         <div class="file-upload-box" onclick="document.getElementById('panFile').click()">
+                             <i class="fa-solid fa-cloud-arrow-up"></i>
+                             <p>Upload Front Side</p>
+                             <input type="file" id="panFile" hidden>
+                         </div>
+                     </div>
+                     
+                      <div class="form-group">
+                         <label>Upload Aadhaar Card</label>
+                         <div class="file-upload-box" onclick="document.getElementById('aadhaarFile').click()">
+                             <i class="fa-solid fa-cloud-arrow-up"></i>
+                             <p>Upload Front & Back</p>
+                             <input type="file" id="aadhaarFile" hidden>
+                         </div>
+                     </div>
+                </div>
+            </div>
+
+            <!-- Bank Details -->
+            <div class="form-section">
+                <div class="section-title"><i class="fa-solid fa-building-columns"></i> Bank Details</div>
+                <div class="form-grid">
+                     <div class="form-group">
+                        <label>Account Holder Name</label>
+                        <input type="text" name="accountName" required placeholder="Name on Passbook">
+                    </div>
+                    <div class="form-group">
+                        <label>Bank Name</label>
+                        <input type="text" name="bankName" required placeholder="e.g. HDFC Bank">
+                    </div>
+                    <div class="form-group">
+                        <label>Account Number</label>
+                        <input type="text" name="accountNumber" required placeholder="">
+                    </div>
+                     <div class="form-group">
+                        <label>IFSC Code</label>
+                        <input type="text" name="ifscCode" required placeholder="HDFC0001234">
+                    </div>
+                     <div class="form-group" style="grid-column: 1 / -1;">
+                         <label>Upload Cancelled Cheque / Passbook</label>
+                         <div class="file-upload-box" onclick="document.getElementById('bankFile').click()">
+                             <i class="fa-solid fa-cloud-arrow-up"></i>
+                             <p>Click to upload or drag and drop</p>
+                             <input type="file" id="bankFile" hidden>
+                         </div>
+                     </div>
+                </div>
+            </div>
+
+            <!-- Declaration -->
+            <div class="form-section">
+                <div class="form-group">
+                    <label style="display: flex; align-items: flex-start; gap: 0.75rem; cursor: pointer; margin-bottom: 1rem;">
+                        <input type="checkbox" id="mobileLinkDeclaration" required style="margin-top: 0.25rem; accent-color: var(--primary-color); transform: scale(1.1);">
+                        <span style="font-size: 0.9rem; color: var(--text-primary); line-height: 1.5;">
+                            <strong>I confirm that my Aadhaar and PAN are linked to the registered mobile number (<span class="mobile-display">...</span>).</strong> I understand that OTP verification on this number will be required for digital signing.
+                        </span>
+                    </label>
+
+                    <label style="display: flex; align-items: flex-start; gap: 0.75rem; cursor: pointer;">
+                        <input type="checkbox" id="kycDeclaration" required style="margin-top: 0.25rem; accent-color: var(--primary-color); transform: scale(1.1);">
+                        <span style="font-size: 0.9rem; color: var(--text-primary); line-height: 1.5;">
+                            I hereby declare that the information provided above is true and correct to the best of my knowledge and belief. I understand that providing false information may result in the rejection of my application or termination of my account. I authorize LogiSmart to verify the details provided.
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-submit">Submit for Verification</button>
+
+          </form>
+        </div>
+      </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+    <script>
+        // Simple file upload interaction
+        document.querySelectorAll('input[type="file"]').forEach(input => {
+            input.addEventListener('change', (e) => {
+                const box = e.target.parentElement;
+                if(e.target.files.length > 0) {
+                    box.style.borderColor = "var(--success-color)";
+                    box.style.backgroundColor = "#f0fdf4";
+                    box.querySelector('p').innerText = "Selected: " + e.target.files[0].name;
+                    box.querySelector('i').className = "fa-solid fa-check";
+                    box.querySelector('i').style.color = "var(--success-color)";
+                }
+            });
+        });
+    </script>
+  </body>
+</html>

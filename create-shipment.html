@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Shipment - LogiSmart</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="dashboard.css" />
+    <!-- Razorpay Checkout -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <style>
+      .form-container {
+        background: white;
+        border-radius: 1rem;
+        padding: 2rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      }
+      .form-section {
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid var(--border-color);
+      }
+      .form-section:last-child {
+        border-bottom: none;
+      }
+      .form-section h3 {
+        color: var(--text-primary);
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .form-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+      }
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .form-group label {
+        font-size: 0.875rem;
+        color: var(--text-secondary);
+        font-weight: 500;
+      }
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        padding: 0.75rem;
+        border: 1px solid var(--border-color);
+        border-radius: 0.5rem;
+        font-family: 'Inter', sans-serif;
+        outline: none;
+        transition: border-color 0.2s;
+      }
+      .form-group input:focus,
+      .form-group select:focus,
+      .form-group textarea:focus {
+        border-color: var(--primary-color);
+      }
+      .service-card {
+        border: 1px solid var(--border-color);
+        border-radius: 0.75rem;
+        padding: 1rem;
+        cursor: pointer;
+        transition: all 0.2s;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .service-card:hover {
+        border-color: var(--primary-color);
+        background: #f5f3ff;
+      }
+      .service-card.selected {
+        border-color: var(--primary-color);
+        background: #eef2ff;
+        box-shadow: 0 0 0 2px var(--primary-color);
+      }
+      .btn-submit {
+        background: var(--primary-color);
+        color: white;
+        border: none;
+        padding: 1rem 2rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        cursor: pointer;
+        width: 100%;
+        transition: background 0.2s;
+        font-size: 1rem;
+      }
+      .btn-submit:hover {
+        background: var(--primary-dark);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="logo">
+          <i class="fa-solid fa-truck-fast"></i>
+          <span>LogiSmart</span>
+        </div>
+        <nav class="nav-menu">
+          <ul>
+            <li>
+              <a href="dashboard.html">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="kyc.html">
+                <i class="fa-solid fa-id-card"></i>
+                <span>KYC Verification</span>
+              </a>
+            </li>
+            <li class="active">
+              <a href="create-shipment.html">
+                <i class="fa-solid fa-plus-circle"></i>
+                <span>Create Shipment</span>
+              </a>
+            </li>
+            <li>
+              <a href="shipments.html">
+                <i class="fa-solid fa-box"></i>
+                <span>Shipments</span>
+              </a>
+            </li>
+            <li>
+              <a href="customers.html">
+                <i class="fa-solid fa-users"></i>
+                <span>Customers</span>
+              </a>
+            </li>
+            <li>
+              <a href="analytics.html">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Analytics</span>
+              </a>
+            </li>
+            <li>
+              <a href="wallet.html">
+                <i class="fa-solid fa-wallet"></i>
+                <span>Wallet</span>
+              </a>
+            </li>
+            <li>
+              <a href="settings.html">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="logout-section">
+          <a href="#">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Logout</span>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Header -->
+        <header class="top-bar">
+          <div class="toggle-btn" id="sidebar-toggle">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <div class="search-bar">
+            <!-- Space for title or breadcrumb -->
+            <h2 style="font-size: 1.25rem; font-weight: 600; color: var(--text-primary);">Create New Shipment</h2>
+          </div>
+          <div class="user-profile">
+            <div class="notifications">
+              <i class="fa-regular fa-bell"></i>
+              <span class="badge">3</span>
+            </div>
+            <div class="profile-info">
+              <img src="" alt="User" /> <!-- Populated by JS -->
+              <div class="text">
+                <h4></h4> <!-- Populated by JS -->
+                <p>User</p>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- Content Wrapper -->
+        <div class="content-wrapper">
+          <form id="createShipmentForm" class="form-container">
+            
+            <!-- Sender Details -->
+            <div class="form-section">
+              <h3><i class="fa-solid fa-user-tag"></i> Sender Details</h3>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label>Full Name</label>
+                  <input type="text" name="senderName" required placeholder="e.g. John Doe">
+                </div>
+                <div class="form-group">
+                  <label>Phone Number</label>
+                  <input type="tel" name="senderPhone" required placeholder="+91 98765 43210">
+                </div>
+                <div class="form-group" style="grid-column: 1 / -1;">
+                  <label>Pickup Address</label>
+                  <textarea name="senderAddress" rows="2" required placeholder="Complete address with landmark"></textarea>
+                </div>
+                <div class="form-group">
+                  <label>City</label>
+                  <input type="text" name="senderCity" required placeholder="e.g. Mumbai">
+                </div>
+                <div class="form-group">
+                  <label>Pincode</label>
+                  <input type="text" name="senderPin" required placeholder="e.g. 400001">
+                </div>
+              </div>
+            </div>
+
+            <!-- Receiver Details -->
+            <div class="form-section">
+              <h3><i class="fa-solid fa-location-dot"></i> Receiver Details</h3>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label>Full Name</label>
+                  <input type="text" name="receiverName" required placeholder="e.g. Jane Smith">
+                </div>
+                <div class="form-group">
+                  <label>Phone Number</label>
+                  <input type="tel" name="receiverPhone" required placeholder="+91 98765 43210">
+                </div>
+                <div class="form-group" style="grid-column: 1 / -1;">
+                  <label>Delivery Address</label>
+                  <textarea name="receiverAddress" rows="2" required placeholder="Complete address"></textarea>
+                </div>
+                <div class="form-group">
+                  <label>City</label>
+                  <input type="text" name="receiverCity" required placeholder="e.g. Delhi">
+                </div>
+                <div class="form-group">
+                  <label>Pincode</label>
+                  <input type="text" name="receiverPin" required placeholder="e.g. 110001">
+                </div>
+              </div>
+            </div>
+
+            <!-- Parcel Details -->
+            <div class="form-section">
+              <h3><i class="fa-solid fa-box-open"></i> Parcel Details</h3>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label>Weight (kg)</label>
+                  <input type="number" step="0.1" name="weight" id="weight" required placeholder="0.5">
+                </div>
+                <div class="form-group">
+                  <label>Dimensions (LxWxH cm)</label>
+                  <div style="display: flex; gap: 0.5rem;">
+                     <input type="number" placeholder="L" required>
+                     <input type="number" placeholder="W" required>
+                     <input type="number" placeholder="H" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Category</label>
+                  <select name="category">
+                    <option>Documents</option>
+                    <option>Electronics</option>
+                    <option>Apparel</option>
+                    <option>Fragile</option>
+                    <option>Others</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Declared Value (₹)</label>
+                  <input type="number" name="value" required placeholder="1000">
+                </div>
+              </div>
+            </div>
+
+            <!-- Service Selection -->
+            <div class="form-section">
+              <h3><i class="fa-solid fa-truck-fast"></i> Service Type</h3>
+              <div class="form-grid">
+                <div class="service-card selected" onclick="selectService(this, 'Standard')">
+                  <div>
+                    <h4 style="font-weight: 600; margin-bottom: 0.25rem;">Standard Delivery</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary);">3-5 Business Days</p>
+                  </div>
+                  <div style="text-align: right;">
+                    <h4 style="font-weight: 700; color: var(--primary-color);">₹<span id="price-standard">150</span></h4>
+                  </div>
+                  <input type="radio" name="service" value="Standard" checked style="display:none;">
+                </div>
+
+                <div class="service-card" onclick="selectService(this, 'Express')">
+                  <div>
+                    <h4 style="font-weight: 600; margin-bottom: 0.25rem;">Express Delivery</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary);">1-2 Business Days</p>
+                  </div>
+                  <div style="text-align: right;">
+                    <h4 style="font-weight: 700; color: var(--primary-color);">₹<span id="price-express">350</span></h4>
+                  </div>
+                   <input type="radio" name="service" value="Express" style="display:none;">
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-submit">Book Shipment</button>
+
+          </form>
+        </div>
+      </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+    <script>
+        // Simple UI script for service selection highlight
+        function selectService(card, value) {
+            document.querySelectorAll('.service-card').forEach(c => c.classList.remove('selected'));
+            document.querySelectorAll('input[name="service"]').forEach(i => i.checked = false);
+            
+            card.classList.add('selected');
+            card.querySelector('input').checked = true;
+        }
+
+        // Dynamic price update (Simulated)
+        const weightInput = document.getElementById('weight');
+        weightInput.addEventListener('input', (e) => {
+            const w = parseFloat(e.target.value) || 0.5;
+            const standard = Math.round(150 + (w * 50));
+            const express = Math.round(350 + (w * 100));
+            
+            document.getElementById('price-standard').textContent = standard;
+            document.getElementById('price-express').textContent = express;
+        });
+    </script>
+  </body>
+</html>

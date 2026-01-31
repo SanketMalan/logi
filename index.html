@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logicstick India | Pan-India Logistics Solutions</title>
+    <meta name="description" content="Premium logistics services across India. From Kashmir to Kanyakumari." />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Remix Icon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="header">
+      <div class="container">
+        <nav class="navbar">
+          <a href="#" class="logo">LogicStick<span class="dot">.</span></a>
+          <ul class="nav-links">
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="nav-item">Markets <i class="ri-arrow-down-s-line"></i></a>
+                <div class="dropdown-menu">
+                    <a href="market-ecommerce.html">E-Commerce</a>
+                    <a href="market-pharma.html">Pharma</a>
+                    <a href="market-automotive.html">Automotive</a>
+                    <a href="market-fmcg.html">FMCG & Retail</a>
+                    <a href="market-manufacturing.html">Manufacturing</a>
+                    <a href="market-agriculture.html">Agriculture</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="nav-item">Solutions <i class="ri-arrow-down-s-line"></i></a>
+                <div class="dropdown-menu">
+                    <a href="solution-order-management.html">Order Management - Penom</a>
+                    <a href="solution-distribution.html">Distribution & Fulfillment</a>
+                    <a href="solution-transportation.html">Transportation</a>
+                    <a href="solution-customs.html">Customs Brokerage</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="nav-item">About Us <i class="ri-arrow-down-s-line"></i></a>
+                <div class="dropdown-menu">
+                    <a href="company-overview.html">Company Overview</a>
+                    <a href="management-team.html">Management Team</a>
+                    <a href="locations.html">Locations</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="nav-item">Responsibilities <i class="ri-arrow-down-s-line"></i></a>
+                <div class="dropdown-menu">
+                    <a href="responsibility-sustainability.html">Environment Sustainability</a>
+                    <a href="responsibility-csr.html">Corporate Social Responsibility</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="nav-item">Resources <i class="ri-arrow-down-s-line"></i></a>
+                <div class="dropdown-menu">
+                    <a href="resource-news.html">News & Announcements</a>
+                    <a href="resource-insights.html">Insights</a>
+                    <a href="resource-testimonials.html">Testimonials</a>
+                    <a href="resource-api.html">API Marketplace</a>
+                </div>
+            </li>
+            <li><a href="careers.html" class="nav-item">Careers</a></li>
+            <li><a href="contact.html" class="nav-item">Contact Us</a></li>
+          </ul>
+          <div class="nav-actions">
+
+            <a href="login.html" class="btn-auth-nav btn-login-nav" style="margin-right: 10px;">Login</a>
+            <a href="signup.html" class="btn-auth-nav btn-login-nav">Sign Up</a>
+            <button class="menu-toggle" aria-label="Toggle Menu">
+              <i class="ri-menu-4-line"></i>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="hero-bg">
+        <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=2000&auto=format&fit=crop" alt="Logistics Hub" class="hero-img">
+        <div class="overlay"></div>
+      </div>
+      <div class="container hero-content">
+        <h1 class="hero-title fade-in-up">Seamless Logistics <br> <span class="text-accent">Across India</span></h1>
+        <p class="hero-subtitle fade-in-up delay-1">Connecting every corner of the nation. From metro cities to remote villages, we deliver with precision.</p>
+
+        <!-- Tracking Box -->
+        <div class="tracking-box glass-card fade-in-up delay-2">
+          <div class="tracking-header">
+            <i class="ri-map-pin-line"></i>
+            <span>Track Your Shipment</span>
+          </div>
+          <form id="tracking-form">
+            <div class="input-group">
+              <input
+                type="text"
+                id="track-id"
+                placeholder="Enter Tracking ID (e.g., LSTK-2024)"
+                required
+              />
+              <button type="submit" class="btn btn-accent">
+                <i class="ri-search-line"></i> Track
+              </button>
+            </div>
+          </form>
+          <div id="tracking-result" class="tracking-result hidden">
+            <!-- JS will populate this -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Our Services</span>
+          <h2>Logistics Without Limits</h2>
+        </div>
+        <div class="services-grid">
+            <div class="service-card reveal">
+                <div class="icon-box">
+                    <i class="ri-train-line"></i>
+                </div>
+                <h3>Railway Logistics</h3>
+                <p>Cost-effective bulk transport via India's vast railway network.</p>
+                <a href="service-railway.html" class="link-arrow">Learn More <i class="ri-arrow-right-line"></i></a>
+            </div>
+            <div class="service-card reveal delay-1">
+                <div class="icon-box">
+                    <i class="ri-plane-line"></i>
+                </div>
+                <h3>Domestic Air Cargo</h3>
+                <p>Next-day delivery to all major Indian airports and metro cities.</p>
+                <a href="service-air-cargo.html" class="link-arrow">Learn More <i class="ri-arrow-right-line"></i></a>
+            </div>
+            <div class="service-card reveal delay-2">
+                <div class="icon-box">
+                    <i class="ri-truck-line"></i>
+                </div>
+                <h3>Pan-India Trucking</h3>
+                <p>Fleet of 5000+ trucks covering every state and union territory.</p>
+                <a href="service-trucking.html" class="link-arrow">Learn More <i class="ri-arrow-right-line"></i></a>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    </section>
+
+    <!-- Rate Calculator Section -->
+    <section id="calculator" class="section" style="padding-top: 0; margin-top: -60px; position: relative; z-index: 10;">
+        <div class="container">
+            <div class="calculator-card glass-effect animate-up">
+                <div class="calc-header">
+                    <h3><i class="ri-calculator-line" style="color: var(--primary);"></i> Shipping Rate Estimator</h3>
+                    <p>Get an instant quote for your domestic shipments</p>
+                </div>
+                <form id="rate-calc-form" onsubmit="calculateRate(event)">
+                    <div class="calc-grid">
+                        <div class="input-group">
+                            <label><i class="ri-map-pin-line"></i> Origin Pincode</label>
+                            <input type="text" id="calc-origin" placeholder="e.g. 560000" maxlength="6" class="form-control" required>
+                        </div>
+                        <div class="input-group">
+                            <label><i class="ri-map-pin-time-line"></i> Destination Pincode</label>
+                            <input type="text" id="calc-dest" placeholder="e.g. 400000" maxlength="6" class="form-control" required>
+                        </div>
+                        <div class="input-group">
+                            <label><i class="ri-weight-line"></i> Weight (kg)</label>
+                            <input type="number" id="calc-weight" placeholder="0.5" step="0.1" class="form-control" required>
+                        </div>
+                        <div class="input-group">
+                            <label><i class="ri-truck-line"></i> Service Type</label>
+                            <select id="calc-service" class="form-control">
+                                <option value="standard">Standard Surface (3-5 Days)</option>
+                                <option value="express">Express Air (1-2 Days)</option>
+                            </select>
+                        </div>
+                        <div class="input-group" style="display: flex; align-items: flex-end;">
+                            <button type="submit" class="btn btn-primary" style="width: 100%; height: 48px; font-size: 1rem;"><i class="ri-search-line"></i> Calculate Rate</button>
+                        </div>
+                    </div>
+                </form>
+                <div id="calc-result" class="calc-result" style="display: none;">
+                    <div class="result-box">
+                        <div class="result-row">
+                            <span>Estimated Cost</span>
+                            <span id="result-cost" class="highlight-cost">₹0</span>
+                        </div>
+                        <div class="result-row">
+                            <span>Estimated Time</span>
+                            <span id="result-time" class="highlight-time">-</span>
+                        </div>
+                        <div class="result-actions">
+                            <a href="signup.html" class="btn btn-secondary btn-sm" style="width:100%">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features / About -->
+    <section id="about" class="section bg-light">
+      <div class="container about-grid">
+        <div class="about-content reveal">
+          <span class="badge">Why Choose Us</span>
+          <h2>
+            Technology Driven <br />
+            Logistics
+          </h2>
+          <p>
+            We leverage AI-driven route optimization and real-time tracking to
+            ensure your cargo arrives on time, every time.
+          </p>
+          <ul class="feature-list">
+            <li><i class="ri-check-double-line"></i> 19,000+ Pin Codes Covered</li>
+            <li><i class="ri-shield-check-line"></i> Insurance & Secure Handling</li>
+            <li><i class="ri-customer-service-2-line"></i> 24/7 Support (+91 98765 43210)</li>
+          </ul>
+          <a href="#contact" class="btn btn-secondary">Explore Our Network</a>
+        </div>
+        <div class="about-image reveal delay-1">
+          <div class="image-wrapper glass-effect">
+            <!-- Placeholder using a gradient/abstract if no tracking map yet -->
+            <div class="abstract-map">
+              <div class="map-point p1"></div>
+              <div class="map-point p2"></div>
+              <div class="map-line"></div>
+            </div>
+            <div class="stat-card">
+              <span class="stat-num">5M+</span>
+              <span class="stat-label">Parcels Delivered</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section id="solutions" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">Solutions</span>
+                <h2>Tailored For Your Business</h2>
+            </div>
+            <div class="solutions-container">
+                <div class="solution-item">
+                    <div class="solution-img" style="background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1000&auto=format&fit=crop');"></div>
+                    <div class="solution-content">
+                        <h3>Warehousing</h3>
+                        <p>State-of-the-art storage facilities with real-time inventory management.</p>
+                        <a href="solution-warehousing.html" class="btn-text">Explore <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </div>
+                <div class="solution-item">
+                    <div class="solution-img" style="background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1566576912902-1dcd108e9a65?q=80&w=1000&auto=format&fit=crop');"></div>
+                    <div class="solution-content">
+                        <h3>Smart Packaging</h3>
+                        <p>Eco-friendly and durable packaging solutions for safe transit.</p>
+                        <a href="solution-packaging.html" class="btn-text">Explore <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </div>
+                <div class="solution-item">
+                    <div class="solution-img" style="background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=1000&auto=format&fit=crop');"></div>
+                    <div class="solution-content">
+                        <h3>Customs Brokerage</h3>
+                        <p>Hassle-free customs clearance for seamless cross-border trade.</p>
+                        <a href="solution-customs.html" class="btn-text">Explore <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Markets We Serve -->
+    <section id="markets" class="section" style="background: linear-gradient(rgba(248, 250, 252, 0.94), rgba(248, 250, 252, 0.94)), url('https://images.unsplash.com/photo-1494412519320-aa613dfb7738?q=80&w=2000&auto=format&fit=crop'); background-size: cover; background-position: center;">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">Industries</span>
+                <h2>Markets We Serve</h2>
+                <p style="color: var(--text-muted); max-width: 600px; margin: 15px auto;">Specialized logistics solutions tailored for India's key growth sectors.</p>
+            </div>
+            <div class="markets-grid">
+                <div class="market-card tilt-card" data-tilt>
+                    <div class="market-content">
+                        <i class="ri-shopping-bag-3-line market-icon"></i>
+                        <h3>E-Commerce</h3>
+                        <p>End-to-end fulfillment for D2C brands with COD support.</p>
+                    </div>
+                    <div class="market-bg"></div>
+                </div>
+                <div class="market-card tilt-card" data-tilt>
+                    <div class="market-content">
+                        <i class="ri-heart-pulse-line market-icon"></i>
+                        <h3>Pharma</h3>
+                        <p>Temperature-controlled cold chain for vaccines and medicines.</p>
+                    </div>
+                    <div class="market-bg"></div>
+                </div>
+                <div class="market-card tilt-card" data-tilt>
+                    <div class="market-content">
+                        <i class="ri-steering-2-line market-icon"></i>
+                        <h3>Automotive</h3>
+                        <p>JIT delivery for spare parts and assembly line components.</p>
+                    </div>
+                    <div class="market-bg"></div>
+                </div>
+                <div class="market-card tilt-card" data-tilt>
+                    <div class="market-content">
+                        <i class="ri-store-2-line market-icon"></i>
+                        <h3>FMCG & Retail</h3>
+                        <p>High-volume distribution to supermarkets and empty-shops.</p>
+                    </div>
+                    <div class="market-bg"></div>
+                </div>
+                <div class="market-card tilt-card" data-tilt>
+                    <div class="market-content">
+                        <i class="ri-hammer-line market-icon"></i>
+                        <h3>Manufacturing</h3>
+                        <p>Heavy cargo transport for raw materials and machinery.</p>
+                    </div>
+                    <div class="market-bg"></div>
+                </div>
+                <div class="market-card tilt-card" data-tilt>
+                    <div class="market-content">
+                        <i class="ri-seedling-line market-icon"></i>
+                        <h3>Agriculture</h3>
+                        <p>Farm-to-fork logistics preventing spoilage and wastage.</p>
+                    </div>
+                    <div class="market-bg"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-us" class="section why-us-section" style="background: linear-gradient(rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.92)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2000&auto=format&fit=crop'); background-size: cover; background-position: center; background-attachment: fixed;">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">Advantage</span>
+                <h2 style="color:white;">Why Choose Logicstick?</h2>
+            </div>
+            <div class="why-grid">
+                <a href="why-speed.html" class="why-card glow-effect" style="text-decoration: none; color: inherit; display: block;">
+                    <div class="why-icon"><i class="ri-speed-line"></i></div>
+                    <h4>Hyper Speed</h4>
+                    <p>Optimized routing algorithms ensure the fastest delivery times possible.</p>
+                </a>
+                <a href="why-security.html" class="why-card glow-effect" style="text-decoration: none; color: inherit; display: block;">
+                    <div class="why-icon"><i class="ri-shield-star-line"></i></div>
+                    <h4>Secure Handling</h4>
+                    <p>Tamper-proof packaging and real-time monitoring for high-value cargo.</p>
+                </a>
+                <a href="why-cost.html" class="why-card glow-effect" style="text-decoration: none; color: inherit; display: block;">
+                    <div class="why-icon"><i class="ri-money-dollar-circle-line"></i></div>
+                    <h4>Cost Effective</h4>
+                    <p>Competitive pricing models designed to scale with your business growth.</p>
+                </a>
+                <a href="why-support.html" class="why-card glow-effect" style="text-decoration: none; color: inherit; display: block;">
+                    <div class="why-icon"><i class="ri-24-hours-line"></i></div>
+                    <h4>24/7 Support</h4>
+                    <p>Dedicated support teams available round the clock to assist you.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Careers Section -->
+    <section id="careers" class="section">
+        <div class="container">
+            <div class="careers-box" style="background: linear-gradient(rgba(37, 99, 235, 0.92), rgba(37, 99, 235, 0.92)), url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2000&auto=format&fit=crop'); background-size: cover; background-position: center;">
+                <div class="particles">
+                    <span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <div class="careers-content">
+                    <h2>Join Our Mission</h2>
+                    <p>We are building the future of logistics. If you are passionate about technology and operations, we want you.</p>
+                    <a href="careers.html" class="btn btn-white pulse-btn">View Open Roles</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="footer-brand">
+            <a href="#" class="logo text-white">LogicStick<span class="dot">.</span></a>
+            <p>India's most trusted logistics partner.</p>
+            <p style="margin-top: 10px; font-size: 0.9rem; color: #64748b;">
+                <i class="ri-map-pin-line"></i> 123, Tech Park, Whitefield,<br>
+                Bangalore, Karnataka - 560066
+            </p>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">News</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Privacy</a></li>
+          </ul>
+        </div>
+        <div class="footer-newsletter">
+          <h4>Subscribe</h4>
+          <div class="input-group">
+            <input type="email" placeholder="Your email" />
+            <button class="btn btn-accent">Go</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <p>&copy; 2026 LogicStick Inc. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

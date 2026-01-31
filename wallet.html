@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wallet | LogiSmart Dashboard</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="dashboard.css" />
+     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+     <!-- Razorpay Checkout -->
+     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="logo">
+          <i class="fa-solid fa-truck-fast"></i>
+          <span>LogiSmart</span>
+        </div>
+        <nav class="nav-menu">
+           <ul>
+            <li>
+              <a href="dashboard.html">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="kyc.html">
+                <i class="fa-solid fa-id-card"></i>
+                <span>KYC Verification</span>
+              </a>
+            </li>
+            <li>
+              <a href="shipments.html">
+                <i class="fa-solid fa-box"></i>
+                <span>Shipments</span>
+              </a>
+            </li>
+            <li>
+                <a href="create-shipment.html">
+                  <i class="fa-solid fa-plus-circle"></i>
+                  <span>Create Shipment</span>
+                </a>
+              </li>
+            <li>
+              <a href="customers.html">
+                <i class="fa-solid fa-users"></i>
+                <span>Customers</span>
+              </a>
+            </li>
+            <li>
+              <a href="analytics.html">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Analytics</span>
+              </a>
+            </li>
+            <li class="active">
+              <a href="wallet.html">
+                <i class="fa-solid fa-wallet"></i>
+                <span>Wallet</span>
+              </a>
+            </li>
+            <li>
+              <a href="settings.html">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="logout-section">
+          <a href="#">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Logout</span>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Header -->
+        <header class="top-bar">
+          <div class="toggle-btn" id="sidebar-toggle">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <div class="search-bar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search transactions..." />
+          </div>
+          <div class="user-profile">
+            <div class="notifications">
+              <i class="fa-regular fa-bell"></i>
+              <span class="badge">3</span>
+            </div>
+            <div class="profile-info">
+              <img
+                src="https://ui-avatars.com/api/?name=Admin+User&background=0D8ABC&color=fff"
+                alt="User"
+              />
+              <div class="text">
+                <h4>Alex Morgan</h4>
+                <p>Admin</p>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- Content Wrapper -->
+        <div class="content-wrapper">
+            <div class="section-header">
+                 <h2 style="font-size: 1.5rem; font-weight: 700; color: var(--text-primary);">My Wallet</h2>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; margin-bottom: 2rem;">
+                
+                <!-- Balance Card -->
+                <div style="background: linear-gradient(135deg, #1e1b4b, #312e81); border-radius: 1.5rem; padding: 2rem; color: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); position: relative; overflow: hidden;">
+                    <div style="position: relative; z-index: 1;">
+                        <p style="color: #a5b4fc; font-size: 0.9rem; margin-bottom: 0.5rem;">Current Balance</p>
+                        <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 2rem;">₹ <span id="walletBalance">0.00</span></h2>
+                        
+                        <div style="display: flex; gap: 1rem;">
+                            <button id="addMoneyBtn" style="flex: 1; padding: 0.75rem; background: white; color: #312e81; border: none; border-radius: 0.5rem; font-weight: 600; cursor: pointer;">
+                                <i class="fa-solid fa-plus"></i> Add Funds
+                            </button>
+                             <button id="withdrawBtn" style="flex: 1; padding: 0.75rem; background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.2); border-radius: 0.5rem; font-weight: 600; cursor: pointer;">
+                                <i class="fa-solid fa-arrow-right"></i> Withdraw
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions or Monthly Summary -->
+                <div style="background: white; border-radius: 1rem; padding: 1.5rem; box-shadow: var(--card-shadow);">
+                    <h3 style="margin-bottom: 1rem; font-size: 1.125rem;">Monthly Summary</h3>
+                    <div style="display: flex; gap: 2rem;">
+                        <div>
+                            <p style="color: var(--text-secondary); font-size: 0.85rem;">Total Spent</p>
+                            <h4 style="font-size: 1.25rem;">₹0.00</h4>
+                        </div>
+                         <div>
+                            <p style="color: var(--text-secondary); font-size: 0.85rem;">Total Added</p>
+                            <h4 style="font-size: 1.25rem; color: var(--success-color);">+₹0.00</h4>
+                        </div>
+                    </div>
+                     <div style="margin-top: 1.5rem;">
+                         <p style="font-size: 0.85rem; color: var(--text-secondary);">Spending Limit</p>
+                         <div style="height: 8px; background: #e5e7eb; border-radius: 4px; margin-top: 0.5rem; overflow: hidden;">
+                             <div style="height: 100%; width: 0%; background: var(--primary-color);"></div>
+                         </div>
+                         <p style="font-size: 0.75rem; text-align: right; margin-top: 0.25rem; color: var(--text-secondary);">0% used</p>
+                     </div>
+                </div>
+            </div>
+
+            <!-- Transaction History -->
+            <div class="table-section">
+                <div class="section-header">
+                  <h3>Recent Transactions</h3>
+                   <a href="#" class="view-all">View All</a>
+                </div>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Transaction ID</th>
+                                <th>Date</th>
+                                <th>Description</th>
+                                <th>Method</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+      </main>
+    </div>
+    <script src="dashboard.js"></script>
+  </body>
+</html>

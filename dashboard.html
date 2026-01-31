@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LogiSmart - Logistics Dashboard</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="dashboard.css" />
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Razorpay -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="logo">
+          <i class="fa-solid fa-truck-fast"></i>
+          <span>LogiSmart</span>
+        </div>
+        <nav class="nav-menu">
+          <ul>
+            <li class="active">
+              <a href="dashboard.html">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="shipments.html">
+                <i class="fa-solid fa-box"></i>
+                <span>Shipments</span>
+              </a>
+            </li>
+            <li>
+                <a href="create-shipment.html">
+                  <i class="fa-solid fa-plus-circle"></i>
+                  <span>Create Shipment</span>
+                </a>
+              </li>
+            <li>
+              <a href="customers.html">
+                <i class="fa-solid fa-users"></i>
+                <span>Customers</span>
+              </a>
+            </li>
+            <li>
+              <a href="analytics.html">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Analytics</span>
+              </a>
+            </li>
+            <li>
+              <a href="wallet.html">
+                <i class="fa-solid fa-wallet"></i>
+                <span>Wallet</span>
+              </a>
+            </li>
+            <li>
+              <a href="settings.html">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="logout-section">
+          <a href="#">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Logout</span>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Header -->
+        <header class="top-bar">
+          <div class="toggle-btn" id="sidebar-toggle">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <div class="search-bar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search shipment, order ID..." />
+          </div>
+          <div class="user-profile" onclick="window.location.href='settings.html'" style="cursor: pointer;" title="Go to Profile">
+            <div class="notifications">
+              <i class="fa-regular fa-bell"></i>
+              <span class="badge">3</span>
+            </div>
+            <div class="profile-info">
+              <img
+                src="https://ui-avatars.com/api/?name=Admin+User&background=0D8ABC&color=fff"
+                alt="User"
+              />
+              <div class="text">
+                <h4>Alex Morgan</h4>
+                <p>Admin</p>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- Content Wrapper -->
+        <div class="content-wrapper">
+          <div class="welcome-banner">
+            <div>
+              <h1>Good Morning, Alex! 👋</h1>
+              <p>Here's what's happening with your shipments today.</p>
+            </div>
+            <button class="btn-primary" onclick="window.location.href='create-shipment.html'">
+              <i class="fa-solid fa-plus"></i> New Shipment
+            </button>
+          </div>
+
+          <!-- Stats Cards -->
+          <div class="stats-grid">
+             <div class="stat-card" onclick="window.location.href='kyc.html'" style="cursor: pointer; border: 1px solid #fdba74; background: #fff7ed;">
+              <div class="icon-box" style="background: #fed7aa; color: #c2410c;">
+                <i class="fa-solid fa-id-card"></i>
+              </div>
+              <div class="stat-info">
+                <p style="color: #9a3412;">KYC Status</p>
+                <h3 style="color: #c2410c;">Pending</h3>
+                <span class="trend neutral" style="color: #9a3412;"><i class="fa-solid fa-circle-exclamation"></i> Action Required</span>
+              </div>
+            </div>
+            
+            <!-- Wallet Card Integrated here for Dashboard -->
+             <div class="stat-card" style="background: linear-gradient(135deg, #1e1b4b, #312e81); color: white;"> 
+               <div style="width:100%">
+                  <p style="color: #a5b4fc; font-size: 0.9rem;">Wallet Balance</p>
+                  <h3 id="walletBalance" style="color: white; font-size: 1.8rem; margin: 0.5rem 0;">₹0.00</h3>
+                  <div style="display: flex; gap: 0.5rem; margin-top: 1rem;">
+                      <button id="addMoneyBtn" style="flex: 1; padding: 0.5rem; background: white; color: #312e81; border: none; border-radius: 0.25rem; font-weight: 600; cursor: pointer; font-size: 0.8rem;">
+                          <i class="fa-solid fa-plus"></i> Add
+                      </button>
+                       <button id="withdrawBtn" style="flex: 1; padding: 0.5rem; background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.2); border-radius: 0.25rem; font-weight: 600; cursor: pointer; font-size: 0.8rem;">
+                          Withdraw
+                      </button>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Profile Card -->
+            <div class="stat-card" onclick="window.location.href='settings.html'" style="cursor: pointer; border: 1px solid #e2e8f0; background: #f8fafc;">
+                <div class="icon-box" style="background: #e0e7ff; color: #4338ca;">
+                    <i class="fa-solid fa-user-gear"></i>
+                </div>
+                <div class="stat-info">
+                    <p style="color: #64748b;">My Profile</p>
+                    <h3 style="color: #334155; font-size: 1.2rem;">Manage</h3>
+                    <span class="trend neutral" style="color: #4338ca; font-size: 0.85rem;"><i class="fa-solid fa-arrow-right"></i> View Details</span>
+                </div>
+            </div>
+
+            <div class="stat-card">
+              <div class="icon-box orange">
+                <i class="fa-solid fa-clock"></i>
+              </div>
+              <div class="stat-info">
+                 <p>In Transit</p>
+
+                <h3>0</h3>
+                <span class="trend down"><i class="fa-solid fa-arrow-down"></i> --</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="icon-box green">
+                <i class="fa-solid fa-check-circle"></i>
+              </div>
+              <div class="stat-info">
+                <p>Delivered</p>
+                <h3>0</h3>
+                <span class="trend up"><i class="fa-solid fa-arrow-up"></i> --</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="icon-box purple">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+              </div>
+              <div class="stat-info">
+                <p>Exceptions</p>
+                <h3>0</h3>
+                <span class="trend neutral"><i class="fa-solid fa-minus"></i> --</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Charts & Activity -->
+
+
+          <!-- Recent Shipments Table -->
+          <div class="table-section">
+            <div class="section-header">
+              <h3>Recent Shipments</h3>
+              <a href="#" class="view-all">View All</a>
+            </div>
+            <div class="table-responsive">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Tracking ID</th>
+                    <th>Customer</th>
+                    <th>Destination</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Amount</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Rows populated by JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="dashboard.js"></script>
+  </body>
+</html>

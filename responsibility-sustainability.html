@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environmental Sustainability | Logicstick India</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        .sus-hero {
+            background: linear-gradient(rgba(6, 78, 59, 0.8), rgba(6, 78, 59, 0.8)), url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            margin-top: 80px;
+        }
+
+        .roadmap-container {
+            padding: 100px 0;
+            background: #f0fdf4;
+        }
+
+        .roadmap-flex {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 60px;
+            position: relative;
+        }
+
+        .roadmap-flex::before {
+            content: '';
+            position: absolute;
+            top: 25px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #86efac;
+            z-index: 1;
+        }
+
+        .roadmap-item {
+            position: relative;
+            z-index: 2;
+            width: 30%;
+            text-align: center;
+        }
+
+        .roadmap-year {
+            width: 50px;
+            height: 50px;
+            background: #059669;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin: 0 auto 20px;
+            box-shadow: 0 0 0 10px #f0fdf4;
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .impact-card {
+            background: white;
+            padding: 40px 20px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid #dcfce7;
+        }
+
+        .impact-card h3 {
+            font-size: 2.5rem;
+            color: #059669;
+            margin-bottom: 5px;
+        }
+
+        .impact-card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .tech-card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 30px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .tech-card:hover {
+            border-color: #10b981;
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .tech-card i {
+            font-size: 3rem;
+            color: #10b981;
+            margin-bottom: 20px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header id="header" class="scrolled">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">LogicStick<span class="dot">.</span></a>
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item">Markets <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="market-ecommerce.html">E-Commerce</a>
+                            <a href="market-pharma.html">Pharma</a>
+                            <a href="market-automotive.html">Automotive</a>
+                            <a href="market-fmcg.html">FMCG & Retail</a>
+                            <a href="market-manufacturing.html">Manufacturing</a>
+                            <a href="market-agriculture.html">Agriculture</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item">Solutions <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="solution-order-management.html">Order Management - Penom</a>
+                            <a href="solution-distribution.html">Distribution & Fulfillment</a>
+                            <a href="solution-transportation.html">Transportation</a>
+                            <a href="solution-customs.html">Customs Brokerage</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item">About Us <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="company-overview.html">Company Overview</a>
+                            <a href="management-team.html">Management Team</a>
+                            <a href="locations.html">Locations</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item active">Responsibilities <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="responsibility-sustainability.html">Environment Sustainability</a>
+                            <a href="responsibility-csr.html">Corporate Social Responsibility</a>
+                        </div>
+                    </li>
+                    <li><a href="careers.html" class="nav-item">Careers</a></li>
+                    <li><a href="contact.html" class="nav-item">Contact Us</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="contact.html" class="btn btn-primary">Go Green With Us</a>
+                    <button class="menu-toggle"><i class="ri-menu-4-line"></i></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="sus-hero">
+        <div class="container">
+            <div style="max-width: 800px;">
+                <span class="badge" style="background: #10b981; color: white;">Global Environmental Impact</span>
+                <h1 class="fade-in-up" style="font-size: 4rem; line-height: 1.1; margin: 20px 0;">Logistics for a <br> Carbon-Neutral Future.</h1>
+                <p class="fade-in-up delay-1" style="font-size: 1.25rem; opacity: 0.9;">We are redefining efficiency not just by speed, but by the legacy we leave for the generations to come. Join our mission for Net-Zero 2040.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header" style="text-align: center;">
+                <span class="badge">Sustainability Pillars</span>
+                <h2>Green Tech in Operation</h2>
+            </div>
+            
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <i class="ri-truck-fill"></i>
+                    <h3>EV Last Mile</h3>
+                    <p>Transitioning 100% of our city-delivery fleet to electric vehicles by 2026 to eliminate urban noise and air pollution.</p>
+                </div>
+                <div class="tech-card">
+                    <i class="ri-sun-cloudy-line"></i>
+                    <h3>Solar Hubs</h3>
+                    <p>Every Grade-A warehouse in our network is equipped with rooftop solar panels, generating over 15MWh of clean energy annually.</p>
+                </div>
+                <div class="tech-card">
+                    <i class="ri-seedling-line"></i>
+                    <h3>Bio-Packaging</h3>
+                    <p>Replacing single-use plastics with mushroom-based and corn-starch biodegradable cushioning for all d2c shipments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="roadmap-container">
+        <div class="container">
+            <div class="section-header" style="text-align: center;">
+                <span class="badge">The Path Ahead</span>
+                <h2>Our Net-Zero Roadmap</h2>
+            </div>
+
+            <div class="roadmap-flex">
+                <div class="roadmap-item">
+                    <div class="roadmap-year">2025</div>
+                    <h4>100% Paperless</h4>
+                    <p style="font-size: 0.9rem; margin-top: 10px; color: var(--text-muted);">Eliminating all physical manifests and invoices from our global operations.</p>
+                </div>
+                <div class="roadmap-item">
+                    <div class="roadmap-year">2030</div>
+                    <h4>50% EV Fleet</h4>
+                    <p style="font-size: 0.9rem; margin-top: 10px; color: var(--text-muted);">Half of our long-haul and short-haul movements powered by clean energy.</p>
+                </div>
+                <div class="roadmap-item">
+                    <div class="roadmap-year">2040</div>
+                    <h4>Net Zero</h4>
+                    <p style="font-size: 0.9rem; margin-top: 10px; color: var(--text-muted);">Complete carbon neutrality across all scopes of international operations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header" style="text-align: center;">
+                <span class="badge">Impact Data</span>
+                <h2>Sustainability in Numbers</h2>
+            </div>
+
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <h3>45k</h3>
+                    <p>Metric Tons of CO2 Offset</p>
+                </div>
+                <div class="impact-card">
+                    <h3>2M+</h3>
+                    <p>Plastic Bags Eliminated</p>
+                </div>
+                <div class="impact-card">
+                    <h3>150+</h3>
+                    <p>Solar-Powered Hubs</p>
+                </div>
+                <div class="impact-card">
+                    <h3>1M+</h3>
+                    <p>Trees Planted via Initiatives</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo text-white">LogicStick<span class="dot">.</span></a>
+                <p>India's most trusted logistics partner.</p>
+            </div>
+            <div class="footer-bottom" style="margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; width: 100%; text-align: center;">
+                <p>&copy; 2026 LogicStick Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

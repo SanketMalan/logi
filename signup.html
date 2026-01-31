@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Logicstick India</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        /* Reusing inline styles from login for consistency, normally would be in style.css */
+        .auth-container { display: flex; min-height: 100vh; }
+        .auth-image {
+            flex: 1;
+            background: url('https://images.unsplash.com/photo-1548695607-9c73430ba065?q=80&w=1000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .auth-image::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(135deg, rgba(37,99,235,0.4), rgba(15, 23, 42, 0.7));
+        }
+        .auth-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            background: #f8fafc;
+        }
+        .auth-box {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            width: 100%;
+            max-width: 500px;
+        }
+        .auth-header { text-align: center; margin-bottom: 30px; }
+        .auth-header h1 { font-size: 2rem; color: var(--primary-dark); margin-bottom: 5px; }
+        .auth-header p { color: var(--text-muted); }
+        
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 500; color: var(--text-main); }
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            font-family: inherit;
+            transition: all 0.3s;
+        }
+        .form-control:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+            outline: none;
+        }
+        
+        .btn-auth { width: 100%; padding: 12px; font-size: 1.1rem; margin-top: 10px; }
+        .auth-footer { margin-top: 20px; text-align: center; font-size: 0.9rem; }
+        .auth-footer a { color: var(--primary); font-weight: 600; text-decoration: none; }
+        
+        @media (max-width: 768px) { .auth-image { display: none; } }
+    </style>
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-image"></div>
+        <div class="auth-content">
+            <div class="auth-box">
+                <div class="auth-header">
+                    <a href="index.html" class="logo" style="margin-bottom: 20px; display: inline-block;">LogicStick<span class="dot">.</span></a>
+                    <h1>Create Business Account</h1>
+                    <p>Join India's fastest growing logistics network</p>
+                </div>
+                <form>
+                    <!-- Mobile & OTP Section (First) -->
+                    <div class="form-group">
+                        <label>Mobile Number</label>
+                        <div style="display: flex; gap: 10px;">
+                            <input type="tel" id="mobileInput" class="form-control" placeholder="9876543210" pattern="[0-9]{10}" required>
+                            <button type="button" id="sendOtpBtn" class="btn-auth" style="width: auto; margin-top: 0; white-space: nowrap; font-size: 0.9rem; padding: 0 20px; background: var(--secondary); color: white; border: none; border-radius: 10px; cursor: pointer;">
+                                Send OTP
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-group" id="otpSection" style="display: none;">
+                        <label>Enter OTP</label>
+                        <div style="display: flex; gap: 10px;">
+                            <input type="text" id="otpInput" class="form-control" placeholder="Enter 4-digit OTP" maxlength="4">
+                            <button type="button" id="verifyOtpBtn" class="btn-auth" style="width: auto; margin-top: 0; white-space: nowrap; font-size: 0.9rem; padding: 0 20px; background: #059669; color: white; border: none; border-radius: 10px; cursor: pointer;">
+                                Verify
+                            </button>
+                        </div>
+                        <small id="otpStatus" style="display: block; margin-top: 5px; color: #64748b;"></small>
+                    </div>
+
+                    <!-- Other Details (Disabled Initially) -->
+                    <div id="restOfForm" style="opacity: 0.5; pointer-events: none; transition: opacity 0.3s;">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                            <div class="form-group">
+                                <label>First Name</label>
+                                <input type="text" class="form-control" placeholder="John" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Last Name</label>
+                                <input type="text" class="form-control" placeholder="Doe" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Business Email</label>
+                            <input type="email" class="form-control" placeholder="name@company.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Company Name</label>
+                            <input type="text" class="form-control" placeholder="LogicStick India Pvt Ltd" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" class="form-control" placeholder="Create a strong password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-auth" disabled>Create Account</button>
+                        <p style="text-align: center; margin-top: 15px; font-size: 0.85rem; color: #64748b;">
+                            By clicking create account, you agree to our Terms and Privacy Policy.
+                        </p>
+                    </div>
+
+                    <div class="auth-footer">
+                        Already have an account? <a href="login.html">Sign In</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const sendOtpBtn = document.getElementById('sendOtpBtn');
+        const verifyOtpBtn = document.getElementById('verifyOtpBtn');
+        const otpSection = document.getElementById('otpSection');
+        const otpInput = document.getElementById('otpInput');
+        const otpStatus = document.getElementById('otpStatus');
+        const createAccountBtn = document.querySelector('button[type="submit"]');
+        const mobileInput = document.getElementById('mobileInput');
+
+        let generatedOtp = null;
+        let isVerified = false;
+
+        // Disable submit initially
+        createAccountBtn.disabled = true;
+        createAccountBtn.style.opacity = "0.7";
+        createAccountBtn.innerHTML = "Verify Mobile First";
+
+        sendOtpBtn.addEventListener('click', () => {
+            const mobile = mobileInput.value;
+            if(mobile.length !== 10) {
+                alert("Please enter a valid 10-digit mobile number.");
+                return;
+            }
+            
+            // Simulating SMS API
+            sendOtpBtn.disabled = true;
+            sendOtpBtn.innerHTML = "Sending...";
+            
+            setTimeout(() => {
+                generatedOtp = Math.floor(1000 + Math.random() * 9000);
+                alert(`[DEMO SMS] Your Verification OTP is: ${generatedOtp}`);
+                
+                otpSection.style.display = "block";
+                sendOtpBtn.innerHTML = "Resend OTP";
+                sendOtpBtn.disabled = false;
+                otpStatus.innerHTML = `OTP sent to +91 ${mobile}`;
+                otpStatus.style.color = "var(--text-secondary)";
+            }, 1000);
+        });
+
+        verifyOtpBtn.addEventListener('click', () => {
+            if(otpInput.value == generatedOtp) {
+                isVerified = true;
+                
+                // UI Success
+                otpStatus.innerHTML = "<i class='ri-checkbox-circle-fill'></i> Mobile Verified Successfully!";
+                otpStatus.style.color = "#059669";
+                
+                verifyOtpBtn.disabled = true;
+                verifyOtpBtn.innerHTML = "Verified";
+                mobileInput.disabled = true;
+                sendOtpBtn.style.display = 'none';
+                otpInput.disabled = true;
+
+                // Unlock Rest of Form
+                const restOfForm = document.getElementById("restOfForm");
+                restOfForm.style.opacity = "1";
+                restOfForm.style.pointerEvents = "auto";
+                
+                // Enable Submit
+                createAccountBtn.disabled = false;
+                createAccountBtn.style.opacity = "1";
+                createAccountBtn.innerHTML = "Create Account";
+
+                // Save to localStorage for KYC later
+                const currentData = JSON.parse(localStorage.getItem("logismart_data") || "{}");
+                if(!currentData.user) currentData.user = {};
+                currentData.user.phone = mobileInput.value;
+                localStorage.setItem("logismart_data", JSON.stringify(currentData));
+            } else {
+                otpStatus.innerHTML = "<i class='ri-error-warning-fill'></i> Invalid OTP. Please try again.";
+                otpStatus.style.color = "#dc2626";
+            }
+        });
+        
+        // Handle Form Submit (Hijack to just redirect for demo)
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            if(isVerified) {
+                // In a real app, this would be a POST request
+                const name = document.querySelectorAll('input[type="text"]')[0].value;
+                
+                // Update Mock Data
+                const data = JSON.parse(localStorage.getItem("logismart_data") || "{}");
+                if(data.user) {
+                    data.user.name = name + " " + document.querySelectorAll('input[type="text"]')[1].value;
+                    data.user.email = document.querySelector('input[type="email"]').value;
+                    data.user.phone = mobileInput.value; // Ensure phone is saved
+                } else {
+                   // Fallback init if empty
+                   data.user = { 
+                       name: name, 
+                       phone: mobileInput.value,
+                       notifications: { email: true, sms: true }
+                   };
+                }
+                localStorage.setItem("logismart_data", JSON.stringify(data));
+                
+                alert("Account Created Successfully! Redirecting to Dashboard...");
+                window.location.href = "dashboard.html";
+            }
+        });
+    </script>
+</body>
+</html>

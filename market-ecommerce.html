@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Logistics | Logicstick India</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        .market-hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .solution-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .solution-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .solution-card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .stats-section {
+            background: var(--primary);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+
+        .stat-item h2 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header id="header" class="scrolled">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">LogicStick<span class="dot">.</span></a>
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item active">Markets <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="market-ecommerce.html">E-Commerce</a>
+                            <a href="market-pharma.html">Pharma</a>
+                            <a href="market-automotive.html">Automotive</a>
+                            <a href="market-fmcg.html">FMCG & Retail</a>
+                            <a href="market-manufacturing.html">Manufacturing</a>
+                            <a href="market-agriculture.html">Agriculture</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item">Solutions <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="solution-order-management.html">Order Management - Penom</a>
+                            <a href="solution-distribution.html">Distribution & Fulfillment</a>
+                            <a href="solution-transportation.html">Transportation</a>
+                            <a href="solution-customs.html">Customs Brokerage</a>
+                        </div>
+                    </li>
+                    <li><a href="careers.html" class="nav-item">Careers</a></li>
+                    <li><a href="contact.html" class="nav-item">Contact Us</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="contact.html" class="btn btn-primary">Get Quote</a>
+                    <button class="menu-toggle"><i class="ri-menu-4-line"></i></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="market-hero">
+        <div class="container">
+            <h1 class="fade-in-up">E-Commerce Logistics <br> Hyper-Speed Fulfillment</h1>
+            <p class="fade-in-up delay-1" style="max-width: 700px; margin: 20px auto;">Connecting D2C brands to millions of customers. We handle the complexity of fulfillment so you can focus on building your brand.</p>
+            <a href="contact.html" class="btn btn-primary fade-in-up delay-2">Scale Your Store</a>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">E-Commerce Excellence</span>
+                <h2>Tailored for Online Growth</h2>
+            </div>
+            
+            <div class="solution-grid">
+                <div class="solution-card">
+                    <i class="ri-truck-line"></i>
+                    <h3>Hyper-Local Delivery</h3>
+                    <p>Reach your customers within hours. Our hyper-local network ensures same-day delivery in all major metro cities.</p>
+                </div>
+                <div class="solution-card">
+                    <i class="ri-hand-coin-line"></i>
+                    <h3>Smart COD Management</h3>
+                    <p>Reliable Cash-on-Delivery processing with faster remittance cycles to keep your cash flow healthy.</p>
+                </div>
+                <div class="solution-card">
+                    <i class="ri-exchange-line"></i>
+                    <h3>Seamless Returns</h3>
+                    <p>Automated reverse logistics that make returns easy for customers and efficient for your operations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works-section" style="padding: 100px 0; background: #f8fafc;">
+        <div class="container">
+            <div class="section-header" style="text-align: center; margin-bottom: 60px;">
+                <span class="badge" style="background: #e2e8f0; color: var(--primary);">Workflow</span>
+                <h2>How Our E-Commerce Fulfillment Works</h2>
+                <p style="max-width: 600px; margin: 15px auto; color: var(--text-muted);">From the moment a customer clicks 'Buy' to the delivery at their doorstep.</p>
+            </div>
+            
+            <div class="workflow-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; position: relative;">
+                <div class="workflow-step" style="text-align: center;">
+                    <div class="step-num-large" style="font-size: 4rem; font-weight: 800; color: rgba(var(--primary-rgb), 0.1); margin-bottom: -30px;">01</div>
+                    <i class="ri-link-m" style="font-size: 2.5rem; color: var(--primary); display: block; margin-bottom: 20px;"></i>
+                    <h4 style="font-size: 1.25rem; margin-bottom: 10px;">API Integration</h4>
+                    <p style="font-size: 0.95rem; color: var(--text-muted);">Your store (Shopify, Magento, etc.) syncs directly with our Penom Order Management System for real-time order flow.</p>
+                </div>
+                <div class="workflow-step" style="text-align: center;">
+                    <div class="step-num-large" style="font-size: 4rem; font-weight: 800; color: rgba(var(--primary-rgb), 0.1); margin-bottom: -30px;">02</div>
+                    <i class="ri-barcode-box-line" style="font-size: 2.5rem; color: var(--primary); display: block; margin-bottom: 20px;"></i>
+                    <h4 style="font-size: 1.25rem; margin-bottom: 10px;">Smart Warehousing</h4>
+                    <p style="font-size: 0.95rem; color: var(--text-muted);">Orders are routed to the nearest fulfillment center. Robotics and AI optimize the picking and packing process.</p>
+                </div>
+                <div class="workflow-step" style="text-align: center;">
+                    <div class="step-num-large" style="font-size: 4rem; font-weight: 800; color: rgba(var(--primary-rgb), 0.1); margin-bottom: -30px;">03</div>
+                    <i class="ri-truck-line" style="font-size: 2.5rem; color: var(--primary); display: block; margin-bottom: 20px;"></i>
+                    <h4 style="font-size: 1.25rem; margin-bottom: 10px;">Hyper-Local Transit</h4>
+                    <p style="font-size: 0.95rem; color: var(--text-muted);">The package is dispatched via our express network, reaching the customer in as little as 4-24 hours.</p>
+                </div>
+                <div class="workflow-step" style="text-align: center;">
+                    <div class="step-num-large" style="font-size: 4rem; font-weight: 800; color: rgba(var(--primary-rgb), 0.1); margin-bottom: -30px;">04</div>
+                    <i class="ri-map-pin-user-line" style="font-size: 2.5rem; color: var(--primary); display: block; margin-bottom: 20px;"></i>
+                    <h4 style="font-size: 1.25rem; margin-bottom: 10px;">Last-Mile Tech</h4>
+                    <p style="font-size: 0.95rem; color: var(--text-muted);">Real-time tracking for the customer and digital proof of delivery for you, ensuring a closed-loop experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h2>99.9%</h2>
+                    <p>Order Accuracy</p>
+                </div>
+                <div class="stat-item">
+                    <h2>24h</h2>
+                    <p>Avg. Metro Delivery</p>
+                </div>
+                <div class="stat-item">
+                    <h2>19k+</h2>
+                    <p>Pincodes Covered</p>
+                </div>
+                <div class="stat-item">
+                    <h2>5M+</h2>
+                    <p>D2C Shipments/Month</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo text-white">LogicStick<span class="dot">.</span></a>
+                <p>India's most trusted logistics partner.</p>
+            </div>
+            <div class="footer-bottom" style="margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; width: 100%; text-align: center;">
+                <p>&copy; 2026 LogicStick Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

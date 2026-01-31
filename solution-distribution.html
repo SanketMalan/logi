@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distribution & Fulfillment | Logicstick India</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        .solution-hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            margin-top: 80px;
+        }
+
+        .fulfillment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .fulfill-card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-md);
+            border-bottom: 5px solid var(--primary);
+        }
+
+        .fulfill-card i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .network-section {
+            background: #1e293b;
+            color: white;
+            padding: 100px 0;
+        }
+
+        .benefit-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .benefit-list li {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.1rem;
+        }
+
+        .benefit-list i {
+            color: var(--accent);
+        }
+
+        .workflow-visual {
+            padding: 100px 0;
+            background: #f8fafc;
+        }
+
+        .step-circles {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 60px;
+            position: relative;
+        }
+
+        .step-circles::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #cbd5e1;
+            z-index: 1;
+        }
+
+        .circle-item {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            width: 180px;
+        }
+
+        .circle {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border: 2px solid var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.5rem;
+            color: var(--primary);
+            box-shadow: var(--shadow-md);
+        }
+    </style>
+</head>
+<body>
+    <header id="header" class="scrolled">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">LogicStick<span class="dot">.</span></a>
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item">Markets <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="market-ecommerce.html">E-Commerce</a>
+                            <a href="market-pharma.html">Pharma</a>
+                            <a href="market-automotive.html">Automotive</a>
+                            <a href="market-fmcg.html">FMCG & Retail</a>
+                            <a href="market-manufacturing.html">Manufacturing</a>
+                            <a href="market-agriculture.html">Agriculture</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item active">Solutions <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="solution-order-management.html">Order Management - Penom</a>
+                            <a href="solution-distribution.html">Distribution & Fulfillment</a>
+                            <a href="solution-transportation.html">Transportation</a>
+                            <a href="solution-customs.html">Customs Brokerage</a>
+                        </div>
+                    </li>
+                    <li><a href="careers.html" class="nav-item">Careers</a></li>
+                    <li><a href="contact.html" class="nav-item">Contact Us</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="contact.html" class="btn btn-primary">Scale Fulfillment</a>
+                    <button class="menu-toggle"><i class="ri-menu-4-line"></i></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="solution-hero">
+        <div class="container">
+            <div style="max-width: 800px;">
+                <span class="badge" style="background: var(--accent); color: var(--primary);">Global Distribution</span>
+                <h1 class="fade-in-up" style="font-size: 3.5rem; line-height: 1.1; margin: 20px 0;">Fulfillment that scales with your ambition.</h1>
+                <p class="fade-in-up delay-1" style="font-size: 1.25rem; opacity: 0.9; margin-bottom: 30px;">From storage to same-day delivery. Our distribution network is designed for high-velocity brands needing a Grade-A infrastructure in every major cluster.</p>
+                <div class="fade-in-up delay-2">
+                    <a href="contact.html" class="btn btn-primary">Start Shipping</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header" style="text-align: center;">
+                <span class="badge">Value Delivery</span>
+                <h2>End-to-End Fulfillment Excellence</h2>
+            </div>
+            
+            <div class="fulfillment-grid">
+                <div class="fulfill-card">
+                    <i class="ri-community-line"></i>
+                    <h3>Grade-A Hubs</h3>
+                    <p>Strategically located Multi-user centers in Tier-1 and Tier-2 clusters, minimizing transit times and last-mile costs.</p>
+                </div>
+                <div class="fulfill-card">
+                    <i class="ri-rocket-line"></i>
+                    <h3>Omni-channel Support</h3>
+                    <p>Seamless fulfillment for both B2C (D2C/Ecommerce) and B2B (Retail Replenishment) from a unified inventory pool.</p>
+                </div>
+                <div class="fulfill-card">
+                    <i class="ri-magic-line"></i>
+                    <h3>Value-Added Services</h3>
+                    <p>On-demand kitting, bundling, subscription box assembly, and customized gift-wrapping to delight your customers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="network-section">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+                <div class="network-text">
+                    <h2>Inventory Optimization <br> Made Simple</h2>
+                    <p style="margin-top: 20px; opacity: 0.8;">Our distribution centers aren't just for storage. They are data-driven hubs that help you predict stock requirements and reduce dead-inventory costs.</p>
+                    <ul class="benefit-list">
+                        <li><i class="ri-checkbox-circle-fill"></i> Real-time visibility</li>
+                        <li><i class="ri-checkbox-circle-fill"></i> Same-day SLA</li>
+                        <li><i class="ri-checkbox-circle-fill"></i> ISO Certified centers</li>
+                        <li><i class="ri-checkbox-circle-fill"></i> 99.9% Order accuracy</li>
+                    </ul>
+                </div>
+                <div class="network-image">
+                    <img src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaad5b?q=80&w=1000&auto=format&fit=crop" alt="Smart Warehouse" style="width: 100%; border-radius: 20px; box-shadow: 0 30px 60px rgba(0,0,0,0.5);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="workflow-visual">
+        <div class="container">
+            <div class="section-header" style="text-align: center;">
+                <span class="badge">The Path</span>
+                <h2>Our Distribution Lifecycle</h2>
+            </div>
+            
+            <div class="step-circles">
+                <div class="circle-item">
+                    <div class="circle"><i class="ri-download-2-line"></i></div>
+                    <h5>Inbound</h5>
+                    <p style="font-size: 0.85rem; color: var(--text-muted);">Stock arrival at regional hubs with 100% QC check.</p>
+                </div>
+                <div class="circle-item">
+                    <div class="circle"><i class="ri-survey-line"></i></div>
+                    <h5>Inventory</h5>
+                    <p style="font-size: 0.85rem; color: var(--text-muted);">Digital slotting and real-time stock sync via API.</p>
+                </div>
+                <div class="circle-item">
+                    <div class="circle"><i class="ri-scissors-cut-line"></i></div>
+                    <h5>Process</h5>
+                    <p style="font-size: 0.85rem; color: var(--text-muted);">Pick & Pack according to specific brand guidelines.</p>
+                </div>
+                <div class="circle-item">
+                    <div class="circle"><i class="ri-truck-line"></i></div>
+                    <h5>Dispatch</h5>
+                    <p style="font-size: 0.85rem; color: var(--text-muted);">Express hand-off to nationwide carrier networks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo text-white">LogicStick<span class="dot">.</span></a>
+                <p>India's most trusted logistics partner.</p>
+            </div>
+            <div class="footer-bottom" style="margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; width: 100%; text-align: center;">
+                <p>&copy; 2026 LogicStick Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

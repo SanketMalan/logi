@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manufacturing Logistics | Logicstick India</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        .market-hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .heavy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .heavy-card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-left: 8px solid #475569;
+        }
+
+        .heavy-card i {
+            font-size: 3rem;
+            color: #475569;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .factory-flow {
+            background: #f8fafc;
+            padding: 100px 0;
+            margin-top: 80px;
+        }
+
+        .flow-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .flow-step {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .flow-step:last-child {
+            margin-bottom: 0;
+        }
+
+        .step-icon {
+            width: 60px;
+            height: 60px;
+            background: #475569;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 1.5rem;
+            z-index: 2;
+        }
+
+        .step-info {
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header id="header" class="scrolled">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">LogicStick<span class="dot">.</span></a>
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item active">Markets <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="market-ecommerce.html">E-Commerce</a>
+                            <a href="market-pharma.html">Pharma</a>
+                            <a href="market-automotive.html">Automotive</a>
+                            <a href="market-fmcg.html">FMCG & Retail</a>
+                            <a href="market-manufacturing.html">Manufacturing</a>
+                            <a href="market-agriculture.html">Agriculture</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item">Solutions <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="solution-order-management.html">Order Management - Penom</a>
+                            <a href="solution-distribution.html">Distribution & Fulfillment</a>
+                            <a href="solution-transportation.html">Transportation</a>
+                            <a href="solution-customs.html">Customs Brokerage</a>
+                        </div>
+                    </li>
+                    <li><a href="careers.html" class="nav-item">Careers</a></li>
+                    <li><a href="contact.html" class="nav-item">Contact Us</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="contact.html" class="btn btn-primary">Get Quote</a>
+                    <button class="menu-toggle"><i class="ri-menu-4-line"></i></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="market-hero">
+        <div class="container">
+            <h1 class="fade-in-up">Industrial Manufacturing <br> Heavy-Duty Solutions</h1>
+            <p class="fade-in-up delay-1" style="max-width: 700px; margin: 20px auto;">Supporting the workshops of the nation. Integrated logistics for raw materials, complex machinery, and finished industrial goods.</p>
+            <a href="contact.html" class="btn btn-primary fade-in-up delay-2">Streamline Production</a>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge" style="background: #e2e8f0; color: #475569;">Industrial Backbone</span>
+                <h2>End-to-End Factory Support</h2>
+            </div>
+            
+            <div class="heavy-grid">
+                <div class="heavy-card">
+                    <i class="ri-hammer-line"></i>
+                    <h3>Raw Material Handling</h3>
+                    <p>Optimized inbound logistics for steel, minerals, and chemicals with bulk transport capabilities.</p>
+                </div>
+                <div class="heavy-card">
+                    <i class="ri-crane-line"></i>
+                    <h3>Project Cargo</h3>
+                    <p>Specialized transport for oversized equipment and heavy machinery using multi-axle trailers.</p>
+                </div>
+                <div class="heavy-card">
+                    <i class="ri-factory-line"></i>
+                    <h3>Inter-Plant Movement</h3>
+                    <p>Seamless connectivity between multiple factory locations and central warehouses.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works-section" style="padding: 100px 0; background: #fff;">
+        <div class="container">
+            <div class="section-header" style="text-align: center; margin-bottom: 60px;">
+                <span class="badge" style="background: #e2e8f0; color: #475569;">Operations Detail</span>
+                <h2>Industrial Logistics Management</h2>
+                <p style="max-width: 600px; margin: 15px auto; color: var(--text-muted);">Managing the heavy lifting of industrial supply chains with surgical precision.</p>
+            </div>
+            
+            <div class="workflow-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px;">
+                <div class="workflow-step" style="border-left: 4px solid #475569; padding-left: 30px;">
+                    <h4>1. Strategic Sourcing</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">We manage the movement of raw materials from ports or mines directly to your factory, utilizing specialized heavy-cargo vehicles.</p>
+                </div>
+                <div class="workflow-step" style="border-left: 4px solid #475569; padding-left: 30px;">
+                    <h4>2. Component Inventory</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Real-time tracking of thousands of SKUs, from microchips to engine blocks, using blockchain-enabled inventory systems.</p>
+                </div>
+                <div class="workflow-step" style="border-left: 4px solid #475569; padding-left: 30px;">
+                    <h4>3. Factory Integration</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Our teams operate on-site to handle loading, unloading, and in-plant material movement, reducing your internal overhead.</p>
+                </div>
+                <div class="workflow-step" style="border-left: 4px solid #475569; padding-left: 30px;">
+                    <h4>4. Global Distribution</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Finished machinery is packed using industrial-grade materials and shipped via our multi-modal (Sea/Air/Road) network worldwide.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="factory-flow">
+        <div class="container flow-container">
+            <div class="section-header" style="text-align: center; margin-bottom: 60px;">
+                <h2>Manufacturing Logistics Cycle</h2>
+            </div>
+            <div class="flow-step">
+                <div class="step-icon"><i class="ri-download-2-line"></i></div>
+                <div class="step-info">
+                    <h4>Inbound Logistics</h4>
+                    <p>Sourcing and delivery of raw materials to the plant gate on a 24/7 schedule.</p>
+                </div>
+            </div>
+            <div class="flow-step">
+                <div class="step-icon"><i class="ri-settings-4-line"></i></div>
+                <div class="step-info">
+                    <h4>In-Plant Operations</h4>
+                    <p>On-site warehouse management, line feeding, and sub-assembly support.</p>
+                </div>
+            </div>
+            <div class="flow-step">
+                <div class="step-icon"><i class="ri-upload-2-line"></i></div>
+                <div class="step-info">
+                    <h4>Outbound Distribution</h4>
+                    <p>Global and domestic distribution of finished industrial products to end-users.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo text-white">LogicStick<span class="dot">.</span></a>
+                <p>India's most trusted logistics partner.</p>
+            </div>
+            <div class="footer-bottom" style="margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; width: 100%; text-align: center;">
+                <p>&copy; 2026 LogicStick Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

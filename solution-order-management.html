@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Management (Penom) | Logicstick India</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        .solution-hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            margin-top: 80px;
+        }
+
+        .tech-feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .tech-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .tech-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+        }
+
+        .tech-card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .pipeline-section {
+            background: #f8fafc;
+            padding: 100px 0;
+        }
+
+        .pipeline-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .pipeline-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .step-marker {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+            z-index: 2;
+        }
+
+        .pipeline-step::after {
+            content: '';
+            position: absolute;
+            left: 25px;
+            top: 50px;
+            width: 2px;
+            height: calc(100% + 10px);
+            background: #e2e8f0;
+            z-index: 1;
+        }
+
+        .pipeline-step:last-child::after {
+            display: none;
+        }
+
+        .integration-banner {
+            background: var(--primary);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .logo-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            opacity: 0.7;
+        }
+
+        .logo-cloud span {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <header id="header" class="scrolled">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">LogicStick<span class="dot">.</span></a>
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item">Markets <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="market-ecommerce.html">E-Commerce</a>
+                            <a href="market-pharma.html">Pharma</a>
+                            <a href="market-automotive.html">Automotive</a>
+                            <a href="market-fmcg.html">FMCG & Retail</a>
+                            <a href="market-manufacturing.html">Manufacturing</a>
+                            <a href="market-agriculture.html">Agriculture</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item active">Solutions <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="solution-order-management.html">Order Management - Penom</a>
+                            <a href="solution-distribution.html">Distribution & Fulfillment</a>
+                            <a href="solution-transportation.html">Transportation</a>
+                            <a href="solution-customs.html">Customs Brokerage</a>
+                        </div>
+                    </li>
+                    <li><a href="careers.html" class="nav-item">Careers</a></li>
+                    <li><a href="contact.html" class="nav-item">Contact Us</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="contact.html" class="btn btn-primary">Get Demo</a>
+                    <button class="menu-toggle"><i class="ri-menu-4-line"></i></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="solution-hero">
+        <div class="container">
+            <div style="max-width: 800px;">
+                <span class="badge" style="background: var(--accent); color: var(--primary);">Next-Gen SaaS</span>
+                <h1 class="fade-in-up" style="font-size: 3.5rem; line-height: 1.1; margin: 20px 0;">Intelligence at the speed of business with Penom™</h1>
+                <p class="fade-in-up delay-1" style="font-size: 1.25rem; opacity: 0.9; margin-bottom: 30px;">Eliminate manual intervention. Penom integrates your sales channels, warehouses, and carriers into a single, intelligent command center.</p>
+                <div class="fade-in-up delay-2">
+                    <a href="contact.html" class="btn btn-primary">Schedule a Demo</a>
+                    <a href="#pipeline" class="btn btn-outline" style="margin-left: 15px; border-color: white; color: white;">How it Works</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header" style="text-align: center; margin-bottom: 60px;">
+                <span class="badge">OMS Features</span>
+                <h2>One Platform. Infinite Control.</h2>
+            </div>
+            
+            <div class="tech-feature-grid">
+                <div class="tech-card">
+                    <i class="ri-share-line"></i>
+                    <h3>Multi-Channel Sync</h3>
+                    <p>Aggregates orders from Shopify, Amazon, Magento, and your B2B portals into one centralized queue automatically.</p>
+                </div>
+                <div class="tech-card">
+                    <i class="ri-brain-line"></i>
+                    <h3>Smart Routing</h3>
+                    <p>AI algorithms determine the optimal fulfillment node based on customer proximity, shipping cost, and real-time inventory levels.</p>
+                </div>
+                <div class="tech-card">
+                    <i class="ri-line-chart-line"></i>
+                    <h3>Predictive Analytics</h3>
+                    <p>Forecast demand and potential stock-outs before they happen using our advanced machine-learning engine.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pipeline" class="pipeline-section">
+        <div class="container">
+            <div class="section-header" style="text-align: center; margin-bottom: 80px;">
+                <span class="badge">The Penom Pipeline</span>
+                <h2>The Lifecycle of an Order</h2>
+            </div>
+            
+            <div class="pipeline-container">
+                <div class="pipeline-step">
+                    <div class="step-marker">1</div>
+                    <div class="step-content">
+                        <h4>Ingestion & Validation</h4>
+                        <p style="color: var(--text-muted);">Orders from all sources are captured and checked for address accuracy and fraud risk using 50+ data points.</p>
+                    </div>
+                </div>
+                <div class="pipeline-step">
+                    <div class="step-marker">2</div>
+                    <div class="step-content">
+                        <h4>Allocation Logic</h4>
+                        <p style="color: var(--text-muted);">The system allocates inventory from the best-fit warehouse, reserving stock instantly to prevent overselling.</p>
+                    </div>
+                </div>
+                <div class="pipeline-step">
+                    <div class="step-marker">3</div>
+                    <div class="step-content">
+                        <h4>Fulfillment Orchestration</h4>
+                        <p style="color: var(--text-muted);">WMS instructions are sent to the floor. Picking, Packing, and Labeling are tracked in real-time within Penom.</p>
+                    </div>
+                </div>
+                <div class="pipeline-step">
+                    <div class="step-marker">4</div>
+                    <div class="step-content">
+                        <h4>Carrier Selection</h4>
+                        <p style="color: var(--text-muted);">Penom selects the highest-rated carrier for that specific route and product type, generating labels and tracking IDs on the fly.</p>
+                    </div>
+                </div>
+                <div class="pipeline-step">
+                    <div class="step-marker">5</div>
+                    <div class="step-content">
+                        <h4>Post-Purchase Delight</h4>
+                        <p style="color: var(--text-muted);">White-labeled tracking pages and automated SMS/Email notifications keep your customers informed until the final mile.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="integration-banner">
+        <div class="container">
+            <h2>Integrates with Your Entire Stack</h2>
+            <p style="opacity: 0.8; margin-top: 10px;">No code required. Connect in minutes.</p>
+            <div class="logo-cloud">
+                <span>SHOPIFY</span>
+                <span>WOOCOMMERCE</span>
+                <span>SAP</span>
+                <span>ORACLE</span>
+                <span>AMAZON</span>
+                <span>MAGENTO</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo text-white">LogicStick<span class="dot">.</span></a>
+                <p>India's most trusted logistics partner.</p>
+            </div>
+            <div class="footer-bottom" style="margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; width: 100%; text-align: center;">
+                <p>&copy; 2026 LogicStick Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

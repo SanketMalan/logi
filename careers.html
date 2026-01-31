@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers | Logicstick India</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        .careers-hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            margin-bottom: 60px;
+        }
+        
+        .careers-hero h1 { font-size: 3.5rem; margin-bottom: 20px; }
+        .careers-hero p { font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin: 0 auto; }
+
+        .culture-section { padding: 80px 0; }
+        .culture-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .culture-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .culture-card:hover { transform: translateY(-5px); }
+        .culture-card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .job-board { background: #f8fafc; padding: 80px 0; }
+        .job-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s;
+            border-left: 5px solid var(--primary);
+        }
+        .job-card:hover { transform: translateX(10px); box-shadow: var(--shadow-md); }
+        .job-info h3 { margin-bottom: 5px; color: var(--text-heading); }
+        .job-meta { color: var(--text-muted); font-size: 0.9rem; }
+        .job-meta span { margin-right: 20px; }
+        .job-meta i { margin-right: 5px; }
+
+        @media (max-width: 768px) {
+            .job-card { flex-direction: column; align-items: flex-start; gap: 20px; }
+            .job-card .btn { width: 100%; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <header id="header" class="scrolled">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">LogicStick<span class="dot">.</span></a>
+                <ul class="nav-links">
+                     <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item">Markets <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="market-ecommerce.html">E-Commerce</a>
+                            <a href="market-pharma.html">Pharma</a>
+                            <a href="market-automotive.html">Automotive</a>
+                            <a href="market-fmcg.html">FMCG & Retail</a>
+                            <a href="market-manufacturing.html">Manufacturing</a>
+                            <a href="market-agriculture.html">Agriculture</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item">Solutions <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="solution-order-management.html">Order Management - Penom</a>
+                            <a href="solution-distribution.html">Distribution & Fulfillment</a>
+                            <a href="solution-transportation.html">Transportation</a>
+                            <a href="solution-customs.html">Customs Brokerage</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item">About Us <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="company-overview.html">Company Overview</a>
+                            <a href="management-team.html">Management Team</a>
+                            <a href="locations.html">Locations</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item">Responsibilities <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="responsibility-sustainability.html">Environment Sustainability</a>
+                            <a href="responsibility-csr.html">Corporate Social Responsibility</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item">Resources <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="resource-news.html">News & Announcements</a>
+                            <a href="resource-insights.html">Insights</a>
+                            <a href="resource-testimonials.html">Testimonials</a>
+                            <a href="resource-api.html">API Marketplace</a>
+                        </div>
+                    </li>
+                    <li><a href="careers.html" class="nav-item active">Careers</a></li>
+                    <li><a href="contact.html" class="nav-item">Contact Us</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="menu-toggle"><i class="ri-menu-4-line"></i></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="careers-hero">
+        <div class="container animate-up">
+            <h1>Build The Future of Logistics</h1>
+            <p>Join a team of visionaries, engineers, and problem-solvers transforming global supply chains.</p>
+            <a href="#open-roles" class="btn btn-primary" style="margin-top: 30px;">View Openings</a>
+        </div>
+    </section>
+
+    <section class="culture-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">Culture</span>
+                <h2>Why Logicstick?</h2>
+                <p style="color:var(--text-muted); max-width: 600px; margin: 15px auto;">We don't just move boxes; we push boundaries. Here's what you can expect when you join us.</p>
+            </div>
+            <div class="culture-grid">
+                <div class="culture-card">
+                    <i class="ri-team-line"></i>
+                    <h3>Collaborative Growth</h3>
+                    <p>Work with the brightest minds in the industry in an environment that values every voice.</p>
+                </div>
+                <div class="culture-card">
+                    <i class="ri-heart-pulse-line"></i>
+                    <h3>Health & Wellness</h3>
+                    <p>Comprehensive health insurance for you and your family, plus wellness programs.</p>
+                </div>
+                <div class="culture-card">
+                    <i class="ri-rocket-line"></i>
+                    <h3>Innovation First</h3>
+                    <p>Access to cutting-edge technology and opportunities to lead experimental projects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="open-roles" class="job-board">
+        <div class="container">
+            <div class="section-header">
+                <h2>Open Positions</h2>
+            </div>
+            
+            <div class="job-card">
+                <div class="job-info">
+                    <h3>Senior Full Stack Engineer</h3>
+                    <div class="job-meta">
+                        <span><i class="ri-map-pin-line"></i> Bangalore, India</span>
+                        <span><i class="ri-time-line"></i> Full-time</span>
+                        <span><i class="ri-money-dollar-circle-line"></i> Competitive</span>
+                    </div>
+                </div>
+                <a href="#apply" class="btn btn-secondary">Apply Now</a>
+            </div>
+
+            <div class="job-card">
+                <div class="job-info">
+                    <h3>Logistics Operations Manager</h3>
+                    <div class="job-meta">
+                        <span><i class="ri-map-pin-line"></i> Mumbai, India</span>
+                        <span><i class="ri-time-line"></i> Full-time</span>
+                    </div>
+                </div>
+                <a href="#apply" class="btn btn-secondary">Apply Now</a>
+            </div>
+
+            <div class="job-card">
+                <div class="job-info">
+                    <h3>Enterprise Sales Executive</h3>
+                    <div class="job-meta">
+                        <span><i class="ri-map-pin-line"></i> Delhi NCR, India</span>
+                        <span><i class="ri-time-line"></i> Full-time</span>
+                        <span><i class="ri-briefcase-line"></i> 3+ Years Exp</span>
+                    </div>
+                </div>
+                <a href="#apply" class="btn btn-secondary">Apply Now</a>
+            </div>
+
+             <div class="job-card">
+                <div class="job-info">
+                    <h3>Supply Chain Analyst</h3>
+                    <div class="job-meta">
+                        <span><i class="ri-map-pin-line"></i> Remote (India)</span>
+                        <span><i class="ri-time-line"></i> Contract</span>
+                    </div>
+                </div>
+                <a href="#apply" class="btn btn-secondary">Apply Now</a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo text-white">LogicStick<span class="dot">.</span></a>
+                <p>India's most trusted logistics partner.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

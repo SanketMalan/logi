@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Overview | Logicstick India</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        .about-hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            margin-top: 80px;
+        }
+
+        .timeline-section {
+            padding: 100px 0;
+            background: #fff;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 50px auto 0;
+            padding: 0 20px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            background: #e2e8f0;
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            margin-bottom: 60px;
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .timeline-item:nth-child(even) {
+            justify-content: flex-start;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background: var(--primary);
+            border-radius: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+
+        .timeline-content {
+            width: 45%;
+            padding: 30px;
+            background: #f8fafc;
+            border-radius: 20px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .timeline-content h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .pillar-card {
+            text-align: center;
+            padding: 40px;
+            background: #f8fafc;
+            border-radius: 24px;
+            transition: transform 0.3s ease;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-10px);
+            background: #fff;
+            box-shadow: var(--shadow-md);
+        }
+
+        .pillar-card i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .sustainability-banner {
+            background: #f1fcf4;
+            padding: 100px 0;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <header id="header" class="scrolled">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">LogicStick<span class="dot">.</span></a>
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item">Markets <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="market-ecommerce.html">E-Commerce</a>
+                            <a href="market-pharma.html">Pharma</a>
+                            <a href="market-automotive.html">Automotive</a>
+                            <a href="market-fmcg.html">FMCG & Retail</a>
+                            <a href="market-manufacturing.html">Manufacturing</a>
+                            <a href="market-agriculture.html">Agriculture</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item">Solutions <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="solution-order-management.html">Order Management - Penom</a>
+                            <a href="solution-distribution.html">Distribution & Fulfillment</a>
+                            <a href="solution-transportation.html">Transportation</a>
+                            <a href="solution-customs.html">Customs Brokerage</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item active">About Us <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="company-overview.html">Company Overview</a>
+                            <a href="management-team.html">Management Team</a>
+                            <a href="locations.html">Locations</a>
+                        </div>
+                    </li>
+                    <li><a href="careers.html" class="nav-item">Careers</a></li>
+                    <li><a href="contact.html" class="nav-item">Contact Us</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="contact.html" class="btn btn-primary">Partner with Us</a>
+                    <button class="menu-toggle"><i class="ri-menu-4-line"></i></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="about-hero">
+        <div class="container">
+            <div style="max-width: 800px;">
+                <span class="badge" style="background: var(--accent); color: var(--primary);">Established 2010</span>
+                <h1 class="fade-in-up" style="font-size: 4rem; line-height: 1.1; margin: 20px 0;">Driving the growth of <br> Indian Commerce.</h1>
+                <p class="fade-in-up delay-1" style="font-size: 1.25rem; opacity: 0.9;">At LogicStick, we don't just move boxes; we build the infrastructure that allows businesses to scale without limits.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header" style="text-align: center;">
+                <span class="badge">Our Foundation</span>
+                <h2>The Values we Move by</h2>
+            </div>
+            
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <i class="ri-shield-user-line"></i>
+                    <h3>Trust & Integrity</h3>
+                    <p>Building long-term partnerships through transparency and zero-compromise security for your cargo.</p>
+                </div>
+                <div class="pillar-card">
+                    <i class="ri-rocket-line"></i>
+                    <h3>Innovation-First</h3>
+                    <p>Leveraging AI, Robotics, and IoT to solve the most complex logistics challenges in real-time.</p>
+                </div>
+                <div class="pillar-card">
+                    <i class="ri-leaf-line"></i>
+                    <h3>Sustainable Scale</h3>
+                    <p>Committed to net-zero logistics through EV adoption and eco-friendly packaging solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="timeline-section">
+        <div class="container">
+            <div class="section-header" style="text-align: center;">
+                <span class="badge">The Journey</span>
+                <h2>A Decade of Milestones</h2>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2010</h3>
+                        <p>Founded in Mumbai as a specialized customs brokerage firm with a team of five.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2015</h3>
+                        <p>Expanded to 10 major Indian hubs, launching the "Smart Warehousing" vertical.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2020</h3>
+                        <p>Complete technology pivot with the launch of the Penom™ Order Management System.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2024</h3>
+                        <p>India's first fully AI-driven distribution network serving 19,000+ PIN codes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sustainability-banner">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+                <div class="sus-text">
+                    <span class="badge" style="background: #dcfce7; color: #166534; margin-bottom: 20px;">Green Logistics</span>
+                    <h2 style="color: #166534;">Committed to a <br> Greener Future</h2>
+                    <p style="margin: 20px 0; font-size: 1.1rem; opacity: 0.8;">We believe growth shouldn't come at the cost of the planet. LogicStick is leading the way in sustainable supply chains through active carbon-offsetting and renewable energy adoption.</p>
+                    <div style="display: flex; gap: 30px;">
+                        <div>
+                            <h4 style="color: #166534; font-size: 2rem;">30%</h4>
+                            <p style="font-size: 0.9rem;">EV Fleet 2025</p>
+                        </div>
+                        <div>
+                            <h4 style="color: #166534; font-size: 2rem;">0%</h4>
+                            <p style="font-size: 0.9rem;">Plastic in Packaging</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sus-image">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1000&auto=format&fit=crop" alt="Sustainability" style="width: 100%; border-radius: 30px; box-shadow: 0 20px 50px rgba(22, 101, 52, 0.2);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo text-white">LogicStick<span class="dot">.</span></a>
+                <p>India's most trusted logistics partner.</p>
+            </div>
+            <div class="footer-bottom" style="margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; width: 100%; text-align: center;">
+                <p>&copy; 2026 LogicStick Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

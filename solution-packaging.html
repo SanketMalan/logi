@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Packaging | Logicstick India</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        .packaging-hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('https://images.unsplash.com/photo-1607082349566-187342175e2f?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .benefit-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 50px 0;
+        }
+
+        .benefit-card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            border-bottom: 5px solid var(--primary);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .benefit-card i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .packaging-types {
+            background: #f8fafc;
+            padding: 100px 0;
+        }
+
+        .type-item {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 50px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+
+        .type-item:nth-child(even) {
+            grid-template-columns: 1.2fr 1fr;
+        }
+
+        .type-content h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .type-image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+        }
+    </style>
+</head>
+<body>
+    <header id="header" class="scrolled">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">LogicStick<span class="dot">.</span></a>
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item">Markets <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="market-ecommerce.html">E-Commerce</a>
+                            <a href="market-pharma.html">Pharma</a>
+                            <a href="market-automotive.html">Automotive</a>
+                            <a href="market-fmcg.html">FMCG & Retail</a>
+                            <a href="market-manufacturing.html">Manufacturing</a>
+                            <a href="market-agriculture.html">Agriculture</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item active">Solutions <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="solution-order-management.html">Order Management - Penom</a>
+                            <a href="solution-distribution.html">Distribution & Fulfillment</a>
+                            <a href="solution-transportation.html">Transportation</a>
+                            <a href="solution-customs.html">Customs Brokerage</a>
+                        </div>
+                    </li>
+                    <!-- Standard Nav Links -->
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item">About Us <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="company-overview.html">Company Overview</a>
+                            <a href="management-team.html">Management Team</a>
+                            <a href="locations.html">Locations</a>
+                        </div>
+                    </li>
+                    <li><a href="index.html#responsibilities" class="nav-item">Responsibilities</a></li>
+                    <li><a href="resource-testimonials.html" class="nav-item">Testimonials</a></li>
+                    <li><a href="careers.html" class="nav-item">Careers</a></li>
+                    <li><a href="contact.html" class="nav-item">Contact Us</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="login.html" class="btn-auth-nav btn-login-nav" style="margin-right: 10px;">Login</a>
+                    <a href="signup.html" class="btn-auth-nav btn-login-nav">Sign Up</a>
+                    <button class="menu-toggle"><i class="ri-menu-4-line"></i></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="packaging-hero">
+        <div class="container">
+            <h1 class="fade-in-up">Smart Packaging <br> Sustainable & Connected</h1>
+            <p class="fade-in-up delay-1" style="max-width: 700px; margin: 20px auto;">Beyond protection. Our packaging communicates, tracks, and preserves, all while being 100% eco-friendly.</p>
+            <a href="contact.html" class="btn btn-primary fade-in-up delay-2">Get a Custom Design</a>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="benefit-grid">
+                <div class="benefit-card">
+                    <i class="ri-leaf-line"></i>
+                    <h3>Zero Plastic</h3>
+                    <img src="https://images.unsplash.com/photo-1591336322312-540798ca779c?q=80&w=1000&auto=format&fit=crop" alt="Eco Packaging" style="width: 100%; border-radius: 10px; margin: 15px 0;">
+                    <p>100% compostable and biodegradable materials that don't compromise on durability.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="ri-qr-code-line"></i>
+                    <h3>IoT Integration</h3>
+                    <p>Embedded sensors to track temperature, humidity, and shock in real-time.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="ri-palette-line"></i>
+                    <h3>Custom Branding</h3>
+                    <p>High-quality eco-friendly printing to make your brand stand out on every doorstep.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="packaging-types">
+        <div class="container">
+            <div class="type-item">
+                <div class="type-image">
+                    <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=1000&auto=format&fit=crop" alt="Cold Chain">
+                </div>
+                <div class="type-content">
+                    <h3>Temperature Controlled</h3>
+                    <p>Our intelligent thermal packaging ensures that pharma and perishable goods stay within their required temperature range for up to 72 hours, even in extreme Indian climates.</p>
+                    <ul class="feature-list" style="margin-top: 20px;">
+                        <li><i class="ri-checkbox-circle-line"></i> Phase Change Materials</li>
+                        <li><i class="ri-checkbox-circle-line"></i> Real-time Temp Monitoring</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="type-item">
+                <div class="type-content">
+                    <h3>Tamper-Proof Tech</h3>
+                    <p>Advanced NFC seals that alert you the moment a package is opened or tampered with, ensuring the integrity of high-value goods.</p>
+                    <ul class="feature-list" style="margin-top: 20px;">
+                        <li><i class="ri-checkbox-circle-line"></i> Digital Signatures</li>
+                        <li><i class="ri-checkbox-circle-line"></i> Blockchain Verified</li>
+                    </ul>
+                </div>
+                <div class="type-image">
+                    <img src="https://images.unsplash.com/photo-1566576912902-1dcd108e9a65?q=80&w=1000&auto=format&fit=crop" alt="Security">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo text-white">LogicStick<span class="dot">.</span></a>
+                <p>India's most trusted logistics partner.</p>
+            </div>
+            <div class="footer-bottom" style="margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; width: 100%; text-align: center;">
+                <p>&copy; 2026 LogicStick Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

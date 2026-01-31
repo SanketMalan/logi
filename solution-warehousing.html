@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Warehousing & Working | Logicstick India</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        .service-hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .process-section {
+            background: var(--bg-light);
+            padding: 100px 0;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .step-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-image {
+            flex: 1;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header id="header" class="scrolled">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">LogicStick<span class="dot">.</span></a>
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item">Markets <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="market-ecommerce.html">E-Commerce</a>
+                            <a href="market-pharma.html">Pharma</a>
+                            <a href="market-automotive.html">Automotive</a>
+                            <a href="market-fmcg.html">FMCG & Retail</a>
+                            <a href="market-manufacturing.html">Manufacturing</a>
+                            <a href="market-agriculture.html">Agriculture</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item active">Solutions <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="solution-order-management.html">Order Management - Penom</a>
+                            <a href="solution-distribution.html">Distribution & Fulfillment</a>
+                            <a href="solution-transportation.html">Transportation</a>
+                            <a href="solution-customs.html">Customs Brokerage</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item">About Us <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="company-overview.html">Company Overview</a>
+                            <a href="management-team.html">Management Team</a>
+                            <a href="locations.html">Locations</a>
+                        </div>
+                    </li>
+                    <li><a href="index.html#responsibilities" class="nav-item">Responsibilities</a></li>
+                    <li><a href="resource-testimonials.html" class="nav-item">Testimonials</a></li>
+                    <li><a href="careers.html" class="nav-item">Careers</a></li>
+                    <li><a href="contact.html" class="nav-item">Contact Us</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="login.html" class="btn-auth-nav btn-login-nav" style="margin-right: 10px;">Login</a>
+                    <a href="signup.html" class="btn-auth-nav btn-login-nav">Sign Up</a>
+                    <button class="menu-toggle"><i class="ri-menu-4-line"></i></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="service-hero">
+        <div class="container">
+            <h1 class="fade-in-up">Smart Warehousing <br> & Intelligent Working</h1>
+            <p class="fade-in-up delay-1" style="max-width: 700px; margin: 20px auto;">Efficiency redefined through robotics, AI, and seamless human-machine collaboration. Our warehouses are more than just storage; they are the brains of your supply chain.</p>
+            <a href="contact.html" class="btn btn-primary fade-in-up delay-2">Get a Custom Design</a>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">Innovation First</span>
+                <h2>Why Our Warehousing is "Smart"</h2>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="ri-robot-2-line"></i>
+                    <h3>Autonomous Robotics</h3>
+                    <p>AGVs and robotic pickers working 24/7 to ensure zero-error order processing and rapid fulfillment cycles.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="ri-brain-line"></i>
+                    <h3>AI-Driven Inventory</h3>
+                    <p>Predictive analytics that anticipate demand spikes and optimize stock placement for maximum picking efficiency.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="ri-shield-flash-line"></i>
+                    <h3>Blockchain Security</h3>
+                    <p>Every item movement is recorded on an immutable ledger, providing unparalleled transparency and security.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="process-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">The Process</span>
+                <h2>Seamless Smart Integration</h2>
+            </div>
+
+            <div class="step-item">
+                <div class="step-content">
+                    <div class="step-number">1</div>
+                    <h3>Smart Receiving</h3>
+                    <p>Goods are scanned via IoT-enabled docks that automatically verify quantity and condition against digital manifests.</p>
+                </div>
+                <div class="step-image">
+                    <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=1000&auto=format&fit=crop" alt="Receiving">
+                </div>
+            </div>
+
+            <div class="step-item">
+                <div class="step-content">
+                    <div class="step-number">2</div>
+                    <h3>Intelligent Put-away</h3>
+                    <p>AI algorithms determine the optimal storage location based on order frequency, weight, and shelf-life requirements.</p>
+                </div>
+                <div class="step-image">
+                    <img src="https://images.unsplash.com/photo-1590601448391-686212cb9573?q=80&w=1000&auto=format&fit=crop" alt="Put-away">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo text-white">LogicStick<span class="dot">.</span></a>
+                <p>India's most trusted logistics partner.</p>
+            </div>
+            <div class="footer-bottom" style="margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; width: 100%; text-align: center;">
+                <p>&copy; 2026 LogicStick Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

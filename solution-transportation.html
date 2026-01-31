@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transportation | Logicstick India</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        .solution-hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            margin-top: 80px;
+        }
+
+        .mode-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: -100px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .mode-card {
+            background: white;
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .mode-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .mode-card i {
+            font-size: 3.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .route-optimization {
+            padding: 120px 0;
+            background: #fff;
+        }
+
+        .fleet-stats {
+            background: #1e293b;
+            color: white;
+            padding: 80px 0;
+            border-radius: 40px;
+            margin: 60px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat-val {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            display: block;
+        }
+
+        .feature-block {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            margin-bottom: 80px;
+        }
+
+        .feature-block:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .feature-img {
+            flex: 1;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .feature-text {
+            flex: 1.2;
+        }
+    </style>
+</head>
+<body>
+    <header id="header" class="scrolled">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">LogicStick<span class="dot">.</span></a>
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item">Markets <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="market-ecommerce.html">E-Commerce</a>
+                            <a href="market-pharma.html">Pharma</a>
+                            <a href="market-automotive.html">Automotive</a>
+                            <a href="market-fmcg.html">FMCG & Retail</a>
+                            <a href="market-manufacturing.html">Manufacturing</a>
+                            <a href="market-agriculture.html">Agriculture</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item active">Solutions <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="solution-order-management.html">Order Management - Penom</a>
+                            <a href="solution-distribution.html">Distribution & Fulfillment</a>
+                            <a href="solution-transportation.html">Transportation</a>
+                            <a href="solution-customs.html">Customs Brokerage</a>
+                        </div>
+                    </li>
+                    <li><a href="careers.html" class="nav-item">Careers</a></li>
+                    <li><a href="contact.html" class="nav-item">Contact Us</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="contact.html" class="btn btn-primary">Book Cargo</a>
+                    <button class="menu-toggle"><i class="ri-menu-4-line"></i></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="solution-hero">
+        <div class="container" style="text-align: center;">
+            <span class="badge" style="background: var(--accent); color: var(--primary);">Intelligent Movement</span>
+            <h1 class="fade-in-up" style="font-size: 4rem; line-height: 1.1; margin: 20px 0;">Connecting every corner <br> of your global market.</h1>
+            <p class="fade-in-up delay-1" style="font-size: 1.25rem; opacity: 0.9; max-width: 800px; margin: 0 auto 40px;">Whether by Road, Rail, or Air, our multi-modal transport network gets your business moving with zero friction.</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="mode-grid">
+            <div class="mode-card">
+                <i class="ri-truck-line"></i>
+                <h3>Surface Freight</h3>
+                <p>Express FTL and LTL services across a 19,000+ PIN code network with 100% GPS enabled fleet.</p>
+            </div>
+            <div class="mode-card">
+                <i class="ri-plane-line"></i>
+                <h3>Air Solutions</h3>
+                <p>Critical time-definite air cargo services for high-value and perishable goods globally.</p>
+            </div>
+            <div class="mode-card">
+                <i class="ri-train-line"></i>
+                <h3>Rail Corridors</h3>
+                <p>Sustainable, high-volume containerized rail transport for bulk industrial movements.</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="route-optimization">
+        <div class="container">
+            <div class="feature-block">
+                <div class="feature-text">
+                    <span class="badge" style="margin-bottom: 20px;">Optimization</span>
+                    <h2>Intelligent Routing Engine</h2>
+                    <p style="margin: 20px 0; font-size: 1.1rem; opacity: 0.8;">Our proprietary technology analyzes real-time traffic, weather, and fuel efficiency to plot the most cost-effective path for your cargo.</p>
+                    <ul class="feature-list" style="list-style: none;">
+                        <li style="margin-bottom: 15px;"><i class="ri-checkbox-circle-fill" style="color: var(--primary); margin-right: 10px;"></i> Load-Balancing Algorithms</li>
+                        <li style="margin-bottom: 15px;"><i class="ri-checkbox-circle-fill" style="color: var(--primary); margin-right: 10px;"></i> Dynamic Resource Allocation</li>
+                        <li><i class="ri-checkbox-circle-fill" style="color: var(--primary); margin-right: 10px;"></i> Carbon Footprint Tracking</li>
+                    </ul>
+                </div>
+                <div class="feature-img">
+                    <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=1000&auto=format&fit=crop" alt="Fleet View">
+                </div>
+            </div>
+
+            <div class="fleet-stats">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-val">5000+</span>
+                        <p>Dedicated Trucks</p>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-val">100%</span>
+                        <p>GPS Tracked</p>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-val">2.5M</span>
+                        <p>KM Driven / Month</p>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-val">< 0.1%</span>
+                        <p>Freight Claims</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-block">
+                <div class="feature-text">
+                    <span class="badge" style="margin-bottom: 20px;">Specialized</span>
+                    <h2>Cold Chain & Sensitive Cargo</h2>
+                    <p style="margin: 20px 0; font-size: 1.1rem; opacity: 0.8;">Specialized temperature-controlled transit for Pharma and Agri products, ensuring product integrity is never compromised.</p>
+                    <a href="market-pharma.html" class="btn btn-outline">Explore Pharma Logistics</a>
+                </div>
+                <div class="feature-img">
+                    <img src="https://www.coolingindia.in/wp-content/uploads/2024/01/cold-chain-logistics-696x538.jpg" alt="Cold Chain Truck">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo text-white">LogicStick<span class="dot">.</span></a>
+                <p>India's most trusted logistics partner.</p>
+            </div>
+            <div class="footer-bottom" style="margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; width: 100%; text-align: center;">
+                <p>&copy; 2026 LogicStick Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

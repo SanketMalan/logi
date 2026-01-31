@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Stories | Logicstick India</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        .testimonials-hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            margin-top: 80px;
+        }
+
+        .case-study-grid {
+            margin-top: 80px;
+        }
+
+        .cs-card {
+            background: white;
+            border-radius: 40px;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            overflow: hidden;
+            margin-bottom: 80px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+        }
+
+        .cs-card:nth-child(even) {
+            grid-template-columns: 1fr 1.2fr;
+        }
+
+        .cs-card:nth-child(even) .cs-info {
+            order: 1;
+        }
+
+        .cs-card:nth-child(even) .cs-visual {
+            order: 2;
+        }
+
+        .cs-info {
+            padding: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .cs-visual {
+            background: #f8fafc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            position: relative;
+        }
+
+        .cs-visual img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        .impact-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .logo-wall {
+            padding: 80px 0;
+            background: #f8fafc;
+            border-radius: 40px;
+            margin-top: 100px;
+            text-align: center;
+        }
+
+        .logos-flex {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 50px;
+            margin-top: 50px;
+            opacity: 0.5;
+            filter: grayscale(1);
+        }
+
+        .logos-flex i {
+            font-size: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <header id="header" class="scrolled">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">LogicStick<span class="dot">.</span></a>
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item">Markets <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="market-ecommerce.html">E-Commerce</a>
+                            <a href="market-pharma.html">Pharma</a>
+                            <a href="market-automotive.html">Automotive</a>
+                            <a href="market-fmcg.html">FMCG & Retail</a>
+                            <a href="market-manufacturing.html">Manufacturing</a>
+                            <a href="market-agriculture.html">Agriculture</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item">Solutions <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="solution-order-management.html">Order Management - Penom</a>
+                            <a href="solution-distribution.html">Distribution & Fulfillment</a>
+                            <a href="solution-transportation.html">Transportation</a>
+                            <a href="solution-customs.html">Customs Brokerage</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item">About Us <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="company-overview.html">Company Overview</a>
+                            <a href="management-team.html">Management Team</a>
+                            <a href="locations.html">Locations</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item">Responsibilities <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="responsibility-sustainability.html">Environment Sustainability</a>
+                            <a href="responsibility-csr.html">Corporate Social Responsibility</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item active">Resources <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="resource-news.html">News & Announcements</a>
+                            <a href="resource-insights.html">Insights</a>
+                            <a href="resource-testimonials.html">Testimonials</a>
+                            <a href="resource-api.html">API Marketplace</a>
+                        </div>
+                    </li>
+                    <li><a href="careers.html" class="nav-item">Careers</a></li>
+                    <li><a href="contact.html" class="nav-item">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="testimonials-hero">
+        <div class="container">
+            <h1 class="fade-in-up" style="font-size: 4rem;">Partners in Growth.</h1>
+            <p class="fade-in-up delay-1" style="max-width: 600px; opacity: 0.9;">Real stories of transformation from India's leading enterprises and disruptive startups.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="case-study-grid">
+                <div class="cs-card">
+                    <div class="cs-info">
+                        <span class="badge" style="background: #e0f2fe; color: #0369a1;">E-Commerce Case Study</span>
+                        <h2 style="font-size: 2.5rem; margin: 20px 0;">Solving the Peak Season Crisis for UrbanStyle</h2>
+                        <p style="color: var(--text-muted); font-size: 1.1rem;">"With our previous partner, we faced 40% order cancellations during Diwali. LogicStick's Penom system and regional hubs reduced that to zero."</p>
+                        <div class="impact-stats">
+                            <div><h3 style="color:var(--primary);">Zero</h3><p style="font-size:0.8rem;">Cancellations</p></div>
+                            <div><h3 style="color:var(--primary);">40%</h3><p style="font-size:0.8rem;">Cost Saved</p></div>
+                            <div><h3 style="color:var(--primary);">Nex-Day</h3><p style="font-size:0.8rem;">Pan-India Delivery</p></div>
+                        </div>
+                        <p style="margin-top: 40px; font-weight: 700;">— Vikram Singh, CEO</p>
+                    </div>
+                    <div class="cs-visual">
+                        <img src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaad5b?q=80&w=800&auto=format&fit=crop">
+                    </div>
+                </div>
+
+                <div class="cs-card">
+                    <div class="cs-info">
+                        <span class="badge" style="background: #fef2f2; color: #991b1b;">Pharma Logistics Case Study</span>
+                        <h2 style="font-size: 2.5rem; margin: 20px 0;">Maintaining 100% Cold Chain Integrity</h2>
+                        <p style="color: var(--text-muted); font-size: 1.1rem;">"Transporting delicate biologics requires zero margin for error. LogicStick's GPS-enabled temperature monitoring is the best in the industry."</p>
+                        <div class="impact-stats">
+                            <div><h3 style="color:var(--primary);">100%</h3><p style="font-size:0.8rem;">Compliance</p></div>
+                            <div><h3 style="color:var(--primary);">-20°C</h3><p style="font-size:0.8rem;">Stable Control</p></div>
+                            <div><h3 style="color:var(--primary);">24/7</h3><p style="font-size:0.8rem;">NOC Tracking</p></div>
+                        </div>
+                        <p style="margin-top: 40px; font-weight: 700;">— Dr. Ananya Gupta, PharmaCorp</p>
+                    </div>
+                    <div class="cs-visual">
+                        <img src="https://images.unsplash.com/photo-1581093450021-4a7360e9a6ad?q=80&w=800&auto=format&fit=crop">
+                    </div>
+                </div>
+            </div>
+
+            <div class="logo-wall">
+                <div class="container">
+                    <h3>Trusted by 5,000+ Enterprises</h3>
+                    <div class="logos-flex">
+                        <i class="ri-amazon-fill"></i>
+                        <i class="ri-apple-fill"></i>
+                        <i class="ri-google-fill"></i>
+                        <i class="ri-microsoft-fill"></i>
+                        <i class="ri-facebook-box-fill"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo text-white">LogicStick<span class="dot">.</span></a>
+                <p>India's most trusted logistics partner.</p>
+            </div>
+            <div class="footer-bottom" style="margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; width: 100%; text-align: center;">
+                <p>&copy; 2026 LogicStick Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

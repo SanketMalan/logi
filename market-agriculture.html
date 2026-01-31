@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agriculture Logistics | Logicstick India</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        .market-hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('https://images.unsplash.com/photo-1523348830342-d01f9fa59a5e?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .agri-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .agri-card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            text-align: center;
+            border: 1px solid #dcfce7;
+        }
+
+        .agri-card i {
+            font-size: 3rem;
+            color: #16a34a;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .farm-section {
+            background: #f0fdf4;
+            padding: 100px 0;
+            margin-top: 80px;
+            border-radius: 50px 50px 0 0;
+        }
+
+        .farm-flex {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .farm-img {
+            flex: 1;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .farm-text {
+            flex: 1.2;
+        }
+    </style>
+</head>
+<body>
+    <header id="header" class="scrolled">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">LogicStick<span class="dot">.</span></a>
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item active">Markets <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="market-ecommerce.html">E-Commerce</a>
+                            <a href="market-pharma.html">Pharma</a>
+                            <a href="market-automotive.html">Automotive</a>
+                            <a href="market-fmcg.html">FMCG & Retail</a>
+                            <a href="market-manufacturing.html">Manufacturing</a>
+                            <a href="market-agriculture.html">Agriculture</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item">Solutions <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="solution-order-management.html">Order Management - Penom</a>
+                            <a href="solution-distribution.html">Distribution & Fulfillment</a>
+                            <a href="solution-transportation.html">Transportation</a>
+                            <a href="solution-customs.html">Customs Brokerage</a>
+                        </div>
+                    </li>
+                    <li><a href="careers.html" class="nav-item">Careers</a></li>
+                    <li><a href="contact.html" class="nav-item">Contact Us</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="contact.html" class="btn btn-primary">Get Quote</a>
+                    <button class="menu-toggle"><i class="ri-menu-4-line"></i></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="market-hero">
+        <div class="container">
+            <h1 class="fade-in-up">Agri-Logistics <br> From Farm to Fork</h1>
+            <p class="fade-in-up delay-1" style="max-width: 700px; margin: 20px auto;">Connecting rural harvests to urban tables. Reducing wastage and ensuring freshness through temperature-controlled supply chains.</p>
+            <a href="contact.html" class="btn btn-primary fade-in-up delay-2">Enable Freshness</a>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge" style="background: #dcfce7; color: #166534;">Rural Connectivity</span>
+                <h2>Sustaining the Food Chain</h2>
+            </div>
+            
+            <div class="agri-grid">
+                <div class="agri-card">
+                    <i class="ri-temp-cold-line"></i>
+                    <h3>Cold Chain Infrastructure</h3>
+                    <p>Refrigerated storage and transport to preserve shelf-life for fruits, vegetables, and dairy.</p>
+                </div>
+                <div class="agri-card">
+                    <i class="ri-seedling-line"></i>
+                    <h3>Harvest Logistics</h3>
+                    <p>On-demand collection from farm gates during peak harvest seasons to prevent spoilage.</p>
+                </div>
+                <div class="agri-card">
+                    <i class="ri-line-chart-line"></i>
+                    <h3>Market Linkage</h3>
+                    <p>Direct connectivity between farmers and major retail chains or wholesale markets.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works-section" style="padding: 100px 0; background: #fff;">
+        <div class="container">
+            <div class="section-header" style="text-align: center; margin-bottom: 60px;">
+                <span class="badge" style="background: #dcfce7; color: #166534;">Freshness Cycle</span>
+                <h2>The Farm-to-Fork Loop</h2>
+                <p style="max-width: 600px; margin: 15px auto; color: var(--text-muted);">How we bridge the gap between rural production and urban consumption.</p>
+            </div>
+            
+            <div class="workflow-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; text-align: center;">
+                <div class="workflow-step">
+                    <div class="workflow-icon" style="font-size: 3rem; color: #16a34a; margin-bottom: 20px;"><i class="ri-git-merge-line"></i></div>
+                    <h4>Aggregation</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Small-holder harvests are aggregated at our rural collection centers to achieve the scale required for efficient transport.</p>
+                </div>
+                <div class="workflow-step">
+                    <div class="workflow-icon" style="font-size: 3rem; color: #16a34a; margin-bottom: 20px;"><i class="ri-windy-line"></i></div>
+                    <h4>Pre-Cooling</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Immediate pre-cooling at the source removes field heat, significantly slowing down the spoilage process for fresh produce.</p>
+                </div>
+                <div class="workflow-step">
+                    <div class="workflow-icon" style="font-size: 3rem; color: #16a34a; margin-bottom: 20px;"><i class="ri-truck-fill"></i></div>
+                    <h4>Cold Chain Transit</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">GPS-tracked reefer trucks maintain the specific humidity and temperature requirements for each crop type during transit.</p>
+                </div>
+                <div class="workflow-step">
+                    <div class="workflow-icon" style="font-size: 3rem; color: #16a34a; margin-bottom: 20px;"><i class="ri-store-3-line"></i></div>
+                    <h4>Urban Distribution</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Direct delivery to city-based retail fulfillment centers or wholesale markets, ensuring products arrive in garden-fresh condition.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="farm-section">
+        <div class="container farm-flex">
+            <div class="farm-img">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhOIv6qGHPQShaosR2IIh0H9CCBkSCtulQVw&s" alt="Agri Warehouse" style="width: 100%;">
+            </div>
+            <div class="farm-text">
+                <h2 style="color: #166534;">Reducing Post-Harvest Loss</h2>
+                <p style="margin: 20px 0; color: #166534; opacity: 0.8;">Our smart agri-hubs are positioned strategically near production clusters, offering farmers access to pre-cooling facilities and rapid transport networks.</p>
+                <ul class="feature-list" style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 10px;"><i class="ri-check-line" style="color: #16a34a; font-weight: bold;"></i> 24/7 Harvest support</li>
+                    <li style="margin-bottom: 10px;"><i class="ri-check-line" style="color: #16a34a; font-weight: bold;"></i> Digital Mandi connectivity</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo text-white">LogicStick<span class="dot">.</span></a>
+                <p>India's most trusted logistics partner.</p>
+            </div>
+            <div class="footer-bottom" style="margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; width: 100%; text-align: center;">
+                <p>&copy; 2026 LogicStick Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

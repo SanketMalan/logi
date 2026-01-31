@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate Social Responsibility | Logicstick India</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        .csr-hero {
+            background: linear-gradient(rgba(30, 41, 59, 0.8), rgba(30, 41, 59, 0.8)), url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            margin-top: 80px;
+        }
+
+        .program-card {
+            background: #fff;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+            display: flex;
+            margin-bottom: 60px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .program-card:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .program-img {
+            flex: 1;
+            height: 450px;
+        }
+
+        .program-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .program-info {
+            flex: 1.2;
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .program-info h3 {
+            font-size: 2.25rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .program-info p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .metric-row {
+            display: flex;
+            gap: 40px;
+        }
+
+        .metric-box h4 {
+            font-size: 2rem;
+            color: var(--accent);
+        }
+
+        .metric-box p {
+            font-size: 0.85rem;
+            margin: 0;
+        }
+
+        .disaster-response {
+            background: #1e293b;
+            color: white;
+            padding: 100px 0;
+            border-radius: 40px;
+            margin: 100px 0;
+        }
+
+        .dr-flex {
+            display: flex;
+            align-items: center;
+            gap: 80px;
+        }
+
+        .dr-text {
+            flex: 1.2;
+        }
+
+        .dr-icon {
+            flex: 0.8;
+            text-align: center;
+        }
+
+        .dr-icon i {
+            font-size: 8rem;
+            color: #ef4444;
+        }
+    </style>
+</head>
+<body>
+    <header id="header" class="scrolled">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">LogicStick<span class="dot">.</span></a>
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item">Markets <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="market-ecommerce.html">E-Commerce</a>
+                            <a href="market-pharma.html">Pharma</a>
+                            <a href="market-automotive.html">Automotive</a>
+                            <a href="market-fmcg.html">FMCG & Retail</a>
+                            <a href="market-manufacturing.html">Manufacturing</a>
+                            <a href="market-agriculture.html">Agriculture</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item">Solutions <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="solution-order-management.html">Order Management - Penom</a>
+                            <a href="solution-distribution.html">Distribution & Fulfillment</a>
+                            <a href="solution-transportation.html">Transportation</a>
+                            <a href="solution-customs.html">Customs Brokerage</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item">About Us <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="company-overview.html">Company Overview</a>
+                            <a href="management-team.html">Management Team</a>
+                            <a href="locations.html">Locations</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item active">Responsibilities <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="responsibility-sustainability.html">Environment Sustainability</a>
+                            <a href="responsibility-csr.html">Corporate Social Responsibility</a>
+                        </div>
+                    </li>
+                    <li><a href="careers.html" class="nav-item">Careers</a></li>
+                    <li><a href="contact.html" class="nav-item">Contact Us</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="contact.html" class="btn btn-primary">Support Our Cause</a>
+                    <button class="menu-toggle"><i class="ri-menu-4-line"></i></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="csr-hero">
+        <div class="container">
+            <div style="max-width: 800px;">
+                <span class="badge" style="background: var(--accent); color: var(--primary);">Beyond Business</span>
+                <h1 class="fade-in-up" style="font-size: 4rem; line-height: 1.1; margin: 20px 0;">Empowering communities <br> behind every kilometer.</h1>
+                <p class="fade-in-up delay-1" style="font-size: 1.25rem; opacity: 0.9;">At LogicStick, our success is measured by the well-being of the people who power our network and the neighborhoods we drive through.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="program-card">
+                <div class="program-img">
+                    <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?q=80&w=1000&auto=format&fit=crop" alt="Driver Welfare">
+                </div>
+                <div class="program-info">
+                    <span class="badge">Health & Safety</span>
+                    <h3>The Driver's Haven</h3>
+                    <p>Drivers are the heartbeat of India's supply chain. Our 'Haven' initiative provides 10,000+ drivers with comprehensive health insurance, modern rest stops, and financial literacy workshops.</p>
+                    <div class="metric-row">
+                        <div class="metric-box">
+                            <h4>10k+</h4>
+                            <p>Families Insured</p>
+                        </div>
+                        <div class="metric-box">
+                            <h4>50+</h4>
+                            <p>Premium Rest Stops</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="program-card">
+                <div class="program-img">
+                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1000&auto=format&fit=crop" alt="Education">
+                </div>
+                <div class="program-info">
+                    <span class="badge">Education</span>
+                    <h3>LogicStick Scholars</h3>
+                    <p>We provide full scholarships and digital learning resources to the children of our logistics personnel, ensuring that the next generation has the tools to lead in a tech-driven world.</p>
+                    <div class="metric-row">
+                        <div class="metric-box">
+                            <h4>2,500</h4>
+                            <p>Active Scholarships</p>
+                        </div>
+                        <div class="metric-box">
+                            <h4>20+</h4>
+                            <p>Digital Labs Funded</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="disaster-response">
+                <div class="container dr-flex">
+                    <div class="dr-text">
+                        <span class="badge" style="background: #ef4444; border-color: #ef4444;">Emergency Logistics</span>
+                        <h2 style="margin: 20px 0;">Rapid Response Team</h2>
+                        <p style="opacity: 0.8; font-size: 1.15rem;">During national emergencies or natural disasters, LogicStick's fleet becomes a lifeline. We waive all fees for NGOs and government bodies transporting food, water, and medical supplies to affected zones.</p>
+                        <ul style="list-style: none; margin-top: 30px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                            <li><i class="ri-checkbox-circle-fill" style="color: #ef4444; margin-right: 10px;"></i> Priority 24/7 Dispatch</li>
+                            <li><i class="ri-checkbox-circle-fill" style="color: #ef4444; margin-right: 10px;"></i> Cold Chain Medical Ops</li>
+                            <li><i class="ri-checkbox-circle-fill" style="color: #ef4444; margin-right: 10px;"></i> Zero-Cost Transit</li>
+                            <li><i class="ri-checkbox-circle-fill" style="color: #ef4444; margin-right: 10px;"></i> Live Real-Time Tracking</li>
+                        </ul>
+                    </div>
+                    <div class="dr-icon">
+                        <i class="ri-heart-pulse-line"></i>
+                        <p style="margin-top: 20px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">Saving Lives <br> Through Logistics</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo text-white">LogicStick<span class="dot">.</span></a>
+                <p>India's most trusted logistics partner.</p>
+            </div>
+            <div class="footer-bottom" style="margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; width: 100%; text-align: center;">
+                <p>&copy; 2026 LogicStick Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

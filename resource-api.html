@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Marketplace | Logicstick India</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        .api-hero {
+            background: #0f172a;
+            padding: 120px 0 80px;
+            color: white;
+            margin-top: 80px;
+        }
+
+        .api-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .code-window {
+            background: #1e293b;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 40px 100px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .code-header {
+            background: #334155;
+            padding: 12px 20px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .dot-red { width: 10px; height: 10px; background: #ef4444; border-radius: 50%; }
+        .dot-yellow { width: 10px; height: 10px; background: #f59e0b; border-radius: 50%; }
+        .dot-green { width: 10px; height: 10px; background: #10b981; border-radius: 50%; }
+
+        .code-body {
+            padding: 30px;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .system-status {
+            background: #f8fafc;
+            padding: 40px;
+            border-radius: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: -60px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+        }
+
+        .status-dot {
+            width: 12px;
+            height: 12px;
+            background: #10b981;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 10px;
+            box-shadow: 0 0 10px #10b981;
+        }
+
+        .sdk-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .sdk-card {
+            background: white;
+            padding: 40px;
+            border-radius: 30px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .sdk-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .sdk-card i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header id="header" class="scrolled">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo text-white">LogicStick<span class="dot">.</span></a>
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item">Markets <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="market-ecommerce.html">E-Commerce</a>
+                            <a href="market-pharma.html">Pharma</a>
+                            <a href="market-automotive.html">Automotive</a>
+                            <a href="market-fmcg.html">FMCG & Retail</a>
+                            <a href="market-manufacturing.html">Manufacturing</a>
+                            <a href="market-agriculture.html">Agriculture</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item">Solutions <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="solution-order-management.html">Order Management - Penom</a>
+                            <a href="solution-distribution.html">Distribution & Fulfillment</a>
+                            <a href="solution-transportation.html">Transportation</a>
+                            <a href="solution-customs.html">Customs Brokerage</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item">About Us <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="company-overview.html">Company Overview</a>
+                            <a href="management-team.html">Management Team</a>
+                            <a href="locations.html">Locations</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item">Responsibilities <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="responsibility-sustainability.html">Environment Sustainability</a>
+                            <a href="responsibility-csr.html">Corporate Social Responsibility</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-item active">Resources <i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="resource-news.html">News & Announcements</a>
+                            <a href="resource-insights.html">Insights</a>
+                            <a href="resource-testimonials.html">Testimonials</a>
+                            <a href="resource-api.html">API Marketplace</a>
+                        </div>
+                    </li>
+                    <li><a href="careers.html" class="nav-item">Careers</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="#" class="btn btn-primary">Developer Portal</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="api-hero">
+        <div class="container">
+            <div class="api-grid">
+                <div>
+                    <span class="badge" style="background: var(--accent); color: var(--primary);">v3.0 Release</span>
+                    <h1 style="font-size: 4rem; line-height: 1.1; margin: 20px 0;">Build the future of <br> logistics, programmatically.</h1>
+                    <p style="font-size: 1.25rem; opacity: 0.8; margin-bottom: 40px;">Seamlessly integrate Penom™ workflows, real-time tracking, and automated fulfillment into your existing tech stack.</p>
+                    <div style="display: flex; gap: 20px;">
+                        <a href="#" class="btn btn-primary">Get API Key</a>
+                        <a href="#" class="btn btn-outline" style="border-color: white; color: white;">Explore Docs</a>
+                    </div>
+                </div>
+                <div class="code-window">
+                    <div class="code-header">
+                        <div class="dot-red"></div>
+                        <div class="dot-yellow"></div>
+                        <div class="dot-green"></div>
+                    </div>
+                    <div class="code-body">
+                        <pre style="color: #94a3b8;"><span style="color: #60a5fa;">curl</span> -X POST <span style="color: #34d399;">"https://api.logicstick.com/v3/orders"</span> \
+  -H <span style="color: #34d399;">"Authorization: Bearer YOUR_API_KEY"</span> \
+  -d <span style="color: #fbbf24;">'{
+    "origin": "Mumbai_Hub",
+    "destination": "London_Heathrow",
+    "service": "priority_air",
+    "tracking": true
+  }'</span></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="system-status">
+                <div style="display: flex; align-items: center;">
+                    <div class="status-dot"></div>
+                    <h4 style="margin: 0;">All Systems Operational</h4>
+                </div>
+                <div style="display: flex; gap: 40px;">
+                    <p style="margin: 0; font-size: 0.9rem;"><strong>Uptime:</strong> 99.98%</p>
+                    <p style="margin: 0; font-size: 0.9rem;"><strong>Avg Response:</strong> 120ms</p>
+                    <a href="#" style="font-size: 0.9rem; color: var(--primary); font-weight: 700;">Status Page →</a>
+                </div>
+            </div>
+
+            <div class="section-header" style="text-align: center; margin-top: 100px;">
+                <span class="badge">SDKs</span>
+                <h2>Official Libraries</h2>
+            </div>
+
+            <div class="sdk-grid">
+                <div class="sdk-card">
+                    <i class="ri-nodejs-line"></i>
+                    <h4>Node.js</h4>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 20px;">npm install @logicstick/sdk</p>
+                    <a href="#" style="color: var(--primary); font-weight: 700;">GitHub →</a>
+                </div>
+                <div class="sdk-card">
+                    <i class="ri-google-line"></i>
+                    <h4>Go-lang</h4>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 20px;">go get github.com/logicstick/go</p>
+                    <a href="#" style="color: var(--primary); font-weight: 700;">GitHub →</a>
+                </div>
+                <div class="sdk-card">
+                    <i class="ri-terminal-window-line"></i>
+                    <h4>Python</h4>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 20px;">pip install logicstick-py</p>
+                    <a href="#" style="color: var(--primary); font-weight: 700;">GitHub →</a>
+                </div>
+                <div class="sdk-card">
+                    <i class="ri-braces-line"></i>
+                    <h4>PHP</h4>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 20px;">composer require logicstick/php</p>
+                    <a href="#" style="color: var(--primary); font-weight: 700;">GitHub →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo text-white">LogicStick<span class="dot">.</span></a>
+                <p>India's most trusted logistics partner.</p>
+            </div>
+            <div class="footer-bottom" style="margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; width: 100%; text-align: center;">
+                <p>&copy; 2026 LogicStick Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
